@@ -1,6 +1,4 @@
-___
-### New Repository
-___
+
 Q) How to initialize git inside existing project?  
 A) Inside root directory of your project
 ```bash
@@ -18,7 +16,7 @@ $ git add --all  //add all files
 
 ___
 Q) How to commit changes to git ?  
-A) add files first
+A) add files first then
 ```bash
 $ git commit -m "commit message here" 
 ```
@@ -27,15 +25,11 @@ ___
 Q) How to add remote repository to project ?  
 A) 
 ```bash
-$ git remote add <remote_name> git@server.domain:UserName/projectName.git
+$ git remote add <remote_name> git@server.domain:user/projectName.git
+    or
+$ git remote add <remote_name> https://server.domain/user/projectName.git
 ```
 <remote_name> maybe origin,upstream, etc  
-or
-```bash
-   $ git remote add <remote_name> https://server.domain/user/projectName.git
-```
-___
-### Synchronization
 ___
 Q) How to push local Repo to Remote ?  
 A) 
@@ -44,7 +38,6 @@ $ git push <remote_name> <branch_name>
     or
 $ git push <remote_name> --all //push all branches
 ```
-   
 ___
 Q) How to pull from Remote?  
 A) make sure locally your on the same branch
@@ -59,9 +52,6 @@ $ git checkout master
 $ git merge <branch_name>
 ```
 use --no-commit flag to avoid auto commit merge.
-
-___
-### Branches
 ___
 Q) How to know currently working branch?  
 A) 
@@ -74,8 +64,6 @@ A) create new branch from current branch
 ```bash
    $ git checkout -b <branch_name>
 ```
-   Note: common database for all branches.
-
 ___
 Q) How to delete local branch ?  
 A) 
@@ -90,6 +78,8 @@ Q) How to delete remote branch ?
 A) 
 ```bash
 $ git push <remote_name> --delete <branch_name>
+    or
+$ git push <remote_name> :<branch_name>
 ```
 ___
 Q) How to switch between existing branches?  
