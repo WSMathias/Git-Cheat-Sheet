@@ -9,7 +9,7 @@ Q) How to add file to git ?
 A)
 ```bash
 $ git add <file_name> 
-    or
+        or
 $ git add --all  //add all files
 
 ```
@@ -26,7 +26,7 @@ Q) How to add remote repository to project ?
 A) 
 ```bash
 $ git remote add <remote_name> git@server.domain:user/projectName.git
-    or
+        or
 $ git remote add <remote_name> https://server.domain/user/projectName.git
 ```
 <remote_name> maybe origin,upstream, etc  
@@ -35,7 +35,7 @@ Q) How to push local Repo to Remote ?
 A) 
 ```bash
 $ git push <remote_name> <branch_name>
-    or
+        or
 $ git push <remote_name> --all //push all branches
 ```
 ___
@@ -69,7 +69,7 @@ Q) How to delete local branch ?
 A) 
 ```bash
 $ git branch -d <branch_name>
-	or
+        or
 $ git branch -D <branch_name>  //force delete
 ```
 
@@ -78,7 +78,7 @@ Q) How to delete remote branch ?
 A) 
 ```bash
 $ git push <remote_name> --delete <branch_name>
-    or
+        or
 $ git push <remote_name> :<branch_name>
 ```
 ___
@@ -100,7 +100,7 @@ Q) How to roll back to particular commit ?
 A)
 ```bash
 $ git revert <commit>
-       or
+        or
 $ git revert --no-commit <commit>..HEAD
 $ git commit
 ``` 
@@ -123,7 +123,7 @@ Q)How to list all commits ?
 A)
 ```bash
 $ git log           
-    or
+        or
 $ git log -<limit>  // limit = 5 for listing last 5 commits 
 ```
 ___
