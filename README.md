@@ -1,9 +1,17 @@
-<h1>Git cheat sheet for everyone <h1>
+<h1>Git cheat sheet</h1>
+<table>
+	<tr>
+		<td>
+		git version 2.7.4
+		</td>
+	</tr>
+</table>
+
 <h2>Basic git setup :</h2>
 <table>
 	<tr>
-		<th> command </th>
-		<th> description </th>
+		<th> Command </th>
+		<th> Description </th>
 	<tr>
 	<tr>	
 		<td >
@@ -11,7 +19,7 @@
 			$ git config --global user.email "your_email"
 		</td>
 		<td>
-			these details will be reflected in each commit you make.
+			These will be reflected as <b>Author</b> details in each commit you make.
 		</td>
 	</tr>
 </table>
@@ -19,15 +27,15 @@
 <h2>Adding git VCS to project : </h2>
 <table>
 	<tr>
-		<th> command </th>
-		<th> description </th>
+		<th> Command </th>
+		<th> Description </th>
 	<tr>
 	<tr>
 		<td>
 			$ git init .
 		</td>
 		<td>
-			initialize git inside project root directory
+			Initialize git inside project root directory.
 		</td>
 	</tr>
 	<tr>
@@ -35,7 +43,7 @@
 			$ git add .
 		</td>
 		<td>
-			stage all files for commit
+			Stage all files for commit.
 		</td>
 	</tr>
 	<tr>
@@ -43,15 +51,15 @@
 			$ git commit -m "commit-message"
 		</td>
 		<td>
-			commit staged files to git
+			Commit staged files to git.
 		</td>
 	</tr>
 	</table>
 	<table>
 	<h2>Adding Remote repo to Project : </h2>
 	<tr>
-		<th> command </th>
-		<th> description </th>
+		<th> Command </th>
+		<th> Description </th>
 	<tr>
 	<tr>
 		<td>
@@ -84,23 +92,22 @@
 <table>
 <h2>Synchronizing local git with remote (upstream) :</h2>
 	<tr>
-		<th> command </th>
-		<th> description </th>
+		<th> Command </th>
+		<th> Description </th>
 	</tr>
 	<tr>
 		<td>
 			$ git fetch
 		</td>
 		<td>
-			fetch changes from remote.
-			(no changes are made to local)
+			Download changes from remote without making any changes to files in the working directory.
 		</td>
 	</tr>
 	<tr>
 		<td>
 			$ git pull
 		</td><td> 
-			pull others commits from remote (updates working directory)
+			Download others commits from remote and apply to working directory.
 		</td>
 	</tr>
 	<tr>
@@ -108,21 +115,21 @@
 			$ git push
 		</td>
 		<td>
-			upload new commits to remote 
+			Upload local commits to remote.
 		</td>
 	</tr>
 </table>
 <table>
 <h2>Branches in git:<h2>
 	<tr>
-		<th> command </th>
-		<th> description </th>
+		<th> Command </th>
+		<th> Description </th>
 	<tr>
 		<td>
 			$ git branch -a
 		</td>
 		<td>
-			show all branches
+			Show all branches.
 		</td>
 	<tr>
 	<tr>
@@ -130,7 +137,7 @@
 			$ git checkout -b <-new_branch_name-> 
 		</td>
 		<td>
-			create new branch out of current branch and switch to new branch
+			Create new branch out of current branch and switch to new branch.
 		</td>
 	</tr>
 	<tr>
@@ -138,7 +145,7 @@
 			$ git checkout -b <branch_name> <commit_id> 
 		</td>
 		<td>
-			create new branch out of current branch and <br> from particular commit and switch to new branch
+			Create new branch out of current branch<br> from particular commit and switch to new branch.
 		<td>
 	</tr>
 	<tr>
@@ -146,7 +153,7 @@
 			$ git push <-remote_name-> <-branch_name->
 		</td>
 		<td>
-			to push local branch to remote
+			Push local branch to remote.
 		</td>
 	</tr>
 	<tr>
@@ -154,7 +161,7 @@
 			$ git checkout <-branch_name->
 		</td>
 		<td>
-			switch to specified branch
+			Switch to specified branch.
 		</td>
 	</tr>
 	<tr>
@@ -162,30 +169,30 @@
 			$ git branch -d <-branch_name->
 		</td>
 		<td>
-			delete local branch (replace -d by -D for force delete)
+			Delete local branch (replace -d by -D for force delete)
 		</td>
 	</tr>
 	<tr>
 		<td>
-			$ git push <-remote_name-> :<-branch_namr->
+			$ git push <-remote_name-> :<-branch_name->
 		</td>
 		<td>
-			delete remote branch
+			Delete remote branch.
 		</td>
 	</tr>
 </table>
 <table>
 <h2>Commits in git :<h2>
 	<tr>
-		<th> command </th>
-		<th> description </th>
+		<th> Command </th>
+		<th> Description </th>
 	<tr>
 	<tr>
 		<td>
 			$ git commit  --amend
 		</td>
 		<td>
-			edit last commit message
+			Edit last commit message.
 		</td>
 	</tr>
 	<tr>
@@ -193,7 +200,7 @@
 			$ git revert <-commit_id->
 		</td>
 		<td>
-			rollback to the commit specified by commit_id
+			Rollback to the commit specified by <b>commit_id</b>
 		</td>
 	</tr>
 	<tr>
@@ -201,7 +208,7 @@
 			$ git rebase -i HEAD~n
 		</td>
 		<td>
-			select n number of commits, it opens list of commits<br> replace <b>pick</b> by <b>reword</b> to change the commit message of that commit. 
+			Select <b>n</b> number of commits, it opens list of commits<br> replace <b>pick</b> by <b>reword</b> to change the commit message of that commit. 
 		</td>
 	</tr>
 	<tr>
@@ -209,7 +216,7 @@
 			$ git reset --soft HEAD~n
 		</td>
 		<td>
-			uncommit last n commits without overwriting the working directory files
+			Uncommit last <b>n</b> commits without overwriting the working directory files.
 		</td>
 	</tr>
 	<tr>
@@ -224,15 +231,15 @@
 <table>
 <h2>Merging in git : </h2>
 	<tr>
-		<th> command </th>
-		<th> description </th>
+		<th> Command </th>
+		<th> Description </th>
 	</tr>
 	<tr>
 		<td>
 			$ git merge <-branch_name->
 		</td>
 		<td>
-			to merge any branch into current branch (creates auto merge commit)
+			Merge any branch into current branch (creates merge commit)
 		</td>
 	</tr>
 	<tr>
@@ -240,7 +247,7 @@
 			$ git merge <-branch-name->  --no-commit
 		</td>
 		<td>
-			merge without any commit
+			Merge without any commit.
 		</td>
 	</tr>
 	<tr>
@@ -248,7 +255,7 @@
 			$ git pull <-remote_name-> <-branch_name->
 		</td>
 		<td>
-			merge remote branch into local branch
+			Merge remote branch into local branch.
 		</td>
 	</tr>
 </table>
@@ -256,30 +263,30 @@
 <h2>Upstream in git : </h2>
 <p> Upstream is used when we have multiple repositories for single project</p>
 	<tr>
-		<th> command </th>
-		<th> description </th>
+		<th> Command </th>
+		<th> Description </th>
 	</tr>
 	<tr>
 		<td>
 			$ git branch --set-upstream-to=<-remote_name->/<-branch_name-> <-branch_name->
 		</td>
 		<td>
-			set new upstream for branch
+			Set new upstream for the branch.
 		</td>
 	</tr>
 </table>
 <table>
 <h2> list commits in git (log):<h2>
 	<tr>
-		<th> command </th>
-		<th> description </th>
+		<th> Command </th>
+		<th> Description </th>
 	</tr>
 	<tr>
 		<td>
 			$ git log
 		</td>
 		<td>
-			list all commits
+			List all commits.
 		</td>
 	</tr>
 	<tr>
@@ -287,7 +294,7 @@
 			$ git log -<-limit->
 		</td>
 		<td>
-			<b>limit</b> is number of commits to list
+			The <b>limit</b> is number of commits to list
 		</td>
 	</tr>
 </table>
