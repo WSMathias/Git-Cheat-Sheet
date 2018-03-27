@@ -1,300 +1,88 @@
-<h1>Git cheat sheet</h1>
-<table>
-	<tr>
-		<td>
-		git version 2.7.4
-		</td>
-	</tr>
-</table>
+# Git cheat sheet
 
-<h2>Basic git setup :</h2>
-<table>
-	<tr>
-		<th> Command </th>
-		<th> Description </th>
-	<tr>
-	<tr>	
-		<td >
-			$ git config --global user.name "your_username" <br>
-			$ git config --global user.email "your_email"
-		</td>
-		<td>
-			These will be reflected as <b>Author</b> details in each commit you make.
-		</td>
-	</tr>
-</table>
+| git |  version 2.7.4 |
+|-----|----------------|
 
-<h2>Adding git VCS to project : </h2>
-<table>
-	<tr>
-		<th> Command </th>
-		<th> Description </th>
-	<tr>
-	<tr>
-		<td>
-			$ git init .
-		</td>
-		<td>
-			Initialize git inside project root directory.
-		</td>
-	</tr>
-	<tr>
-		<td>
-			$ git add .
-		</td>
-		<td>
-			Stage all files for commit.
-		</td>
-	</tr>
-	<tr>
-		<td>
-			$ git commit -m "commit-message"
-		</td>
-		<td>
-			Commit staged files to git.
-		</td>
-	</tr>
-	</table>
-	<table>
-	<h2>Adding Remote repo to Project : </h2>
-	<tr>
-		<th> Command </th>
-		<th> Description </th>
-	<tr>
-	<tr>
-		<td>
-			$ git remote add <-remote_name-> <-remote_address->
-		</td>
-		<td>
-			add remote repository where<br>
-			remote_name: origin,upstream etc<br>
-			remote_address:(url) gethub, bitbucket etc	
-		</td>
-	</tr>
-	<tr>
-		<td>
-			$ git remote remove <-remote_name->
-		</td>
-		<td>
-			delete remote	
-		</td>
-	</tr>
-	<tr>
-		<td>
-			$ git push <-remote_name-> <-branch-name->
-		</td>
-		<td>
-			push all the commits to remote <br>
-			default branch name master
-		</td>
-	</tr>
-</table>
-<table>
-<h2>Synchronizing local git with remote (upstream) :</h2>
-	<tr>
-		<th> Command </th>
-		<th> Description </th>
-	</tr>
-	<tr>
-		<td>
-			$ git fetch
-		</td>
-		<td>
-			Download changes from remote without making any changes to files in the working directory.
-		</td>
-	</tr>
-	<tr>
-		<td>
-			$ git pull
-		</td><td> 
-			Download others commits from remote and apply to working directory.
-		</td>
-	</tr>
-	<tr>
-		<td>
-			$ git push
-		</td>
-		<td>
-			Upload local commits to remote.
-		</td>
-	</tr>
-</table>
-<table>
-<h2>Branches in git:<h2>
-	<tr>
-		<th> Command </th>
-		<th> Description </th>
-	<tr>
-		<td>
-			$ git branch -a
-		</td>
-		<td>
-			Show all branches.
-		</td>
-	<tr>
-	<tr>
-		<td>
-			$ git checkout -b <-new_branch_name-> 
-		</td>
-		<td>
-			Create new branch out of current branch and switch to new branch.
-		</td>
-	</tr>
-	<tr>
-		<td>
-			$ git checkout -b <branch_name> <commit_id> 
-		</td>
-		<td>
-			Create new branch out of current branch<br> from particular commit and switch to new branch.
-		<td>
-	</tr>
-	<tr>
-		<td>
-			$ git push <-remote_name-> <-branch_name->
-		</td>
-		<td>
-			Push local branch to remote.
-		</td>
-	</tr>
-	<tr>
-		<td>
-			$ git checkout <-branch_name->
-		</td>
-		<td>
-			Switch to specified branch.
-		</td>
-	</tr>
-	<tr>
-		<td>
-			$ git branch -d <-branch_name->
-		</td>
-		<td>
-			Delete local branch (replace -d by -D for force delete)
-		</td>
-	</tr>
-	<tr>
-		<td>
-			$ git push <-remote_name-> :<-branch_name->
-		</td>
-		<td>
-			Delete remote branch.
-		</td>
-	</tr>
-</table>
-<table>
-<h2>Commits in git :<h2>
-	<tr>
-		<th> Command </th>
-		<th> Description </th>
-	<tr>
-	<tr>
-		<td>
-			$ git commit  --amend
-		</td>
-		<td>
-			Edit last commit message.
-		</td>
-	</tr>
-	<tr>
-		<td>
-			$ git revert <-commit_id->
-		</td>
-		<td>
-			Rollback to the commit specified by <b>commit_id</b>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			$ git rebase -i HEAD~n
-		</td>
-		<td>
-			Select <b>n</b> number of commits, it opens list of commits<br> replace <b>pick</b> by <b>reword</b> to change the commit message of that commit. 
-		</td>
-	</tr>
-	<tr>
-		<td>
-			$ git reset --soft HEAD~n
-		</td>
-		<td>
-			Uncommit last <b>n</b> commits without overwriting the working directory files.
-		</td>
-	</tr>
-	<tr>
-		<td>
-			$ git reset --hard HEAD~n
-		</td>
-		<td>
-			uncommit last n changes and overwrite the working directory files
-		</td>
-	</tr>
-</table>
-<table>
-<h2>Merging in git : </h2>
-	<tr>
-		<th> Command </th>
-		<th> Description </th>
-	</tr>
-	<tr>
-		<td>
-			$ git merge <-branch_name->
-		</td>
-		<td>
-			Merge any branch into current branch (creates merge commit)
-		</td>
-	</tr>
-	<tr>
-		<td>
-			$ git merge <-branch-name->  --no-commit
-		</td>
-		<td>
-			Merge without any commit.
-		</td>
-	</tr>
-	<tr>
-		<td>
-			$ git pull <-remote_name-> <-branch_name->
-		</td>
-		<td>
-			Merge remote branch into local branch.
-		</td>
-	</tr>
-</table>
-<table>
-<h2>Upstream in git : </h2>
-<p> Upstream is used when we have multiple repositories for single project</p>
-	<tr>
-		<th> Command </th>
-		<th> Description </th>
-	</tr>
-	<tr>
-		<td>
-			$ git branch --set-upstream-to=<-remote_name->/<-branch_name-> <-branch_name->
-		</td>
-		<td>
-			Set new upstream for the branch.
-		</td>
-	</tr>
-</table>
-<table>
-<h2> list commits in git (log):<h2>
-	<tr>
-		<th> Command </th>
-		<th> Description </th>
-	</tr>
-	<tr>
-		<td>
-			$ git log
-		</td>
-		<td>
-			List all commits.
-		</td>
-	</tr>
-	<tr>
-		<td>
-			$ git log -<-limit->
-		</td>
-		<td>
-			The <b>limit</b> is number of commits to list
-		</td>
-	</tr>
-</table>
+### Basic git setup :
+#### These will be reflected as Author details in each commit you make
+
+#### Global config:
+| Command |
+|---------|
+| $ git config --global user.name "your_username" |
+| $ git config --global user.email "your_email"	|
+
+#### Local config:
+| Command |
+|---------|
+| $ git config  user.name "your_username" |
+| $ git config  user.email "your_email"	|
+
+### Adding git to project:
+| Command | Description |
+|---------|-------------|
+| $ git init . | Initialize git inside project root directory. |
+| $ git add . | Stage all files for commit. |
+| $ git commit -m "commit-message" | Commit staged files to git. |
+
+### Adding Remote repo to Project:
+| Command | Description |
+|---------|-------------|
+| $ git remote add <remote_name> <remote_address> | add remote repository where remote_name: origin,upstream etc remote_address:(url) gethub, bitbucket etc |
+| $ git remote remove <remote_name> |	delete remote |
+| $ git push <remote_name> <branch-name> | push all the commits to remote default branch name master |
+
+### Synchronizing local with remote (upstream):
+| Command | Description |
+|---------|-------------|
+| $ git fetch | Download changes from remote without making any changes to files in the working directory. |
+| $ git pull | Download others commits from remote and apply to working directory. |
+| $ git push | Upload local commits to remote. |
+
+### Branches in git:
+| Command | Description |
+|---------|-------------|
+| $ git branch -a | Show all branches. |
+| $ git checkout -b <new_branch_name> |Create new branch out of current branch and switch to new branch. |
+| $ git checkout -b	| Create new branch out of current branch from particular commit and switch to new branch. |
+| $ git push <remote_name> <branch_name> | Push local branch to remote. |
+| $ git checkout <branch_name> | Switch to specified branch. |
+| $ git branch -d <branch_name> | Delete local branch (replace -d by -D for force delete) |
+| $ git push <remote_name> :<branch_name> |Delete remote branch. |
+
+### Commits in git:
+| Command | Description |
+|---------|-------------|
+| $ git commit --amend | Edit last commit message. |
+| $ git revert <commit_id> | Rollback to the commit specified by commit_id |
+| $ git rebase -i HEAD~n | Select n number of commits, it opens list of commits replace pick by reword to change the commit message of that commit. |
+| $ git reset --soft HEAD~n	| Uncommit last n commits without overwriting the working directory files. |
+| $ git reset --hard HEAD~n	| uncommit last n changes and overwrite the working directory files |
+
+### Merging in git :
+| Command | Description |
+|---------|-------------|
+| $ git merge <branch_name> | Merge any branch into current branch (creates merge commit) |
+| $ git merge <branch-name> --no-commit | Merge without any commit. |
+| $ git pull <remote_name> <branch_name> | pull remote branch into local branch. On conflicts it will create merege commit |
+
+### Fix diverged branches:
+| Command |
+|:-------:|
+| git rebase <remote_name>/<branch_name>|
+| or |
+| git rebase --pull |
+
+### Upstream in git :
+##### Upstream is used when we have multiple repositories for single project
+| Command | Description |
+|---------|-------------|
+| $ git branch --set-upstream-to=<remote_name>/<branch_name> <branch_name> | Set new upstream for the branch. |
+| $ git push -u <remote_name> <branch_name> | push to remote branch and set as upstream |
+
+### List commits in git (log):
+| Command | Description |
+|---------|-------------|
+| $ git log | List all commits. |
+| $ git log -n | The n is number of commits to list |
+
