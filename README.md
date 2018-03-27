@@ -28,7 +28,7 @@
 ### Adding Remote repo to Project:
 | Command | Description |
 |---------|-------------|
-| `$ git remote add <remote_name> <remote_address>` | add remote repository where remote_name: origin,upstream etc remote_address:(url) gethub, bitbucket etc |
+| `$ git remote add <remote_name> <remote_address>` | add remote repository where<br>remote_name: origin,upstream etc<br> remote_address:(url) gethub, bitbucket etc |
 | `$ git remote remove <remote_name>` |	delete remote |
 | `$ git push <remote_name> <branch-name>` | push all the commits to remote default branch name master |
 
