@@ -50,6 +50,17 @@
 | `$ git branch -d <branch_name>` | Delete local branch (replace -d by -D for force delete) |
 | `$ git push <remote_name> :<branch_name>` |Delete remote branch. |
 
+### Git stash:
+##### Save current changes without commiting before doing pull and checkout to other branch
+###### Run following command after `git add <file>` 
+| Command | Description |
+|---------|-------------|
+| `$ git stash save "message"` | save chages with give message |
+| `$ git stash list` | show list of stash |
+| `$ git stash apply stash@{n}` | apply stashed file to current branch without deleting from stash, where `n` is the stash number |
+| `$ git stash pop` | apply last stash to current branch and delete stash |
+| `$ git stash clear` | clear all stash |
+
 ### Commits in git:
 | Command | Description |
 |---------|-------------|
