@@ -69,6 +69,7 @@
 | `$ git rebase -i HEAD~n` | Select n number of commits, it opens list of commits replace pick by reword to change the commit message of that commit. |
 | `$ git reset --soft HEAD~n`	| Uncommit last n commits without overwriting the working directory files. |
 | `$ git reset --hard HEAD~n`	| uncommit last n changes and overwrite the working directory files |
+| `$ git cherry-pick <commit_id>` | pull commit from any branch by its commit id into current branch |
 
 ### Merging in git :
 | Command | Description |
@@ -76,13 +77,14 @@
 | `$ git merge <branch_name>` | Merge any branch into current branch (creates merge commit) |
 | `$ git merge <branch-name> --no-commit` | Merge without any commit. |
 | `$ git pull <remote_name> <branch_name>` | pull remote branch into local branch. On conflicts it will create merege commit |
+| `$ git checkout <branch_name> -- <file_name>` | checkout single file from any branch |
 
 ### Fix diverged branches:
 | Command |
 |:-------:|
 | `git rebase <remote_name>/<branch_name>` |
 | or |
-| `git rebase --pull` |
+| `git rebase` |
 
 ### Upstream in git :
 ##### Upstream is used when we have multiple repositories for single project
