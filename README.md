@@ -28,9 +28,9 @@
 ### Adding Remote repo to Project:
 | Command | Description |
 |---------|-------------|
-| `$ git remote add <remote_name> <remote_address>` | add remote repository where<br>remote_name: origin,upstream etc<br> remote_address:(url) gethub, bitbucket etc |
-| `$ git remote remove <remote_name>` |	delete remote |
-| `$ git push <remote_name> <branch-name>` | push all the commits to remote default branch name master |
+| `$ git remote add <remote_name> <remote_address>` | Add remote repository where<br>remote_name: origin,upstream etc<br> remote_address:(url) gethub, bitbucket etc |
+| `$ git remote remove <remote_name>` |	Delete remote |
+| `$ git push <remote_name> <branch-name>` | Push all the commits to remote default branch name master |
 
 ### Synchronizing local with remote (upstream):
 | Command | Description |
@@ -55,11 +55,11 @@
 ###### Run following command after `git add <file>` 
 | Command | Description |
 |---------|-------------|
-| `$ git stash save "message"` | save chages with give message |
-| `$ git stash list` | show list of stash |
-| `$ git stash apply stash@{n}` | apply stashed file to current branch without deleting from stash, where `n` is the stash number |
-| `$ git stash pop` | apply last stash to current branch and delete stash |
-| `$ git stash clear` | clear all stash |
+| `$ git stash save "message"` | Save chages with give message |
+| `$ git stash list` | Show list of stash |
+| `$ git stash apply stash@{n}` | Apply stashed file to current branch without deleting from stash, where `n` is the stash number |
+| `$ git stash pop` | Apply last stash to current branch and delete stash |
+| `$ git stash clear` | Clear all stash |
 
 ### Commits in git:
 | Command | Description |
@@ -68,16 +68,16 @@
 | `$ git revert <commit_id>` | Rollback to the commit specified by commit_id |
 | `$ git rebase -i HEAD~n` | Select n number of commits, it opens list of commits replace pick by reword to change the commit message of that commit. |
 | `$ git reset --soft HEAD~n`	| Uncommit last n commits without overwriting the working directory files. |
-| `$ git reset --hard HEAD~n`	| uncommit last n changes and overwrite the working directory files |
-| `$ git cherry-pick <commit_id>` | pull commit from any branch by its commit id into current branch |
+| `$ git reset --hard HEAD~n`	| Uncommit last n changes and overwrite the working directory files |
+| `$ git cherry-pick <commit_id>` | Pull commit from any branch by its commit id into current branch |
 
 ### Merging in git :
 | Command | Description |
 |---------|-------------|
 | `$ git merge <branch_name>` | Merge any branch into current branch (creates merge commit) |
 | `$ git merge <branch-name> --no-commit` | Merge without any commit. |
-| `$ git pull <remote_name> <branch_name>` | pull remote branch into local branch. On conflicts it will create merege commit |
-| `$ git checkout <branch_name> -- <file_name>` | checkout single file from any branch |
+| `$ git pull <remote_name> <branch_name>` | Pull remote branch into local branch. On conflicts it will create merege commit |
+| `$ git checkout <branch_name> -- <file_name>` | Checkout single file from any branch |
 
 ### Fix diverged branches:
 | Command |
@@ -86,19 +86,19 @@
 | or |
 | `git rebase` |
 
-### caching in git :
-##### run these commands after updating gitignore then commit the changes.
+### Caching in git :
+##### Run these commands after updating gitignore then commit the changes.
 | Command | Description |
 |---------|-------------|
-| `git rm --cached <filename>` | remove specific file from git cache |
-| `git rm -r --cached .` | remove all files from git cache |
+| `git rm --cached <filename>` | Remove specific file from git cache |
+| `git rm -r --cached .` | Remove all files from git cache |
 
 ### Upstream in git :
 ##### Upstream is used when we have multiple repositories for single project
 | Command | Description |
 |---------|-------------|
-| `$ git branch --set-upstream-to=<remote_name>/<branch_name> <branch_name>` | Set new upstream for the branch. |
-| `$ git push -u <remote_name> <branch_name>` | push to remote branch and set as upstream |
+| `$ git branch --set-upstream-to=<remote_name>/<remote_branch_name> <local_branch_name>` | Set new upstream for the branch. |
+| `$ git push -u <remote_name> <branch_name>` | Push to remote branch and set as upstream |
 
 ### List commits in git (log):
 | Command | Description |
