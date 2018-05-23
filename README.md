@@ -86,6 +86,13 @@
 | or |
 | `git rebase` |
 
+### caching in git :
+##### run these commands after updating gitignore then commit the changes.
+| Command | Description |
+|---------|-------------|
+| `git rm --cached <filename>` | remove specific file from git cache |
+| `git rm -r --cached .` | remove all files from git cache |
+
 ### Upstream in git :
 ##### Upstream is used when we have multiple repositories for single project
 | Command | Description |
