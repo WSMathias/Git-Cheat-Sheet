@@ -43,8 +43,9 @@
 | Command | Description |
 |---------|-------------|
 | `$ git branch -a` | Show all branches. |
+| `$ git branch <new_branch_name> ` | Create new branch (Will not switch working tree to new branch). |
 | `$ git checkout -b <new_branch_name>` |Create new branch out of current branch and switch to new branch. |
-| `$ git checkout -b <branch_name>`	| Create new branch out of current branch from particular commit and switch to new branch. |
+| `$ git branch -m -<old_branch_name> <new_branch_name>` | Rename branch. |
 | `$ git push <remote_name> <branch_name>` | Push local branch to remote. |
 | `$ git checkout <branch_name>` | Switch to specified branch. |
 | `$ git branch -d <branch_name>` | Delete local branch (replace -d by -D for force delete) |
@@ -52,7 +53,7 @@
 
 ### Git stash:
 ##### Save current changes without commiting before doing pull and checkout to other branch
-###### Run following command after `git add <file>` 
+###### Run following command after `git add <file>`
 | Command | Description |
 |---------|-------------|
 | `$ git stash save "message"` | Save chages with give message |
@@ -106,4 +107,8 @@
 |---------|-------------|
 | `$ git log` | List all commits. |
 | `$ git log -n` | The n is number of commits to list |
+
+### Reference:
+---
+[http://schacon.github.io/git/git.html](http://schacon.github.io/git/git.html)
 
