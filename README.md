@@ -61,7 +61,9 @@
 | `$ git stash apply stash@{n}` | Apply stashed file to current branch without deleting from stash, where `n` is the stash number |
 | `$ git stash pop` | Apply last stash to current branch and delete stash |
 | `$ git stash clear` | Clear all stash |
-| 'git checkout stash@{0} -- <filename>` | checkout file from last stash |
+| `$ git checkout stash@{0} -- <filename>` | checkout file from last stash |
+| `$ git stash show -p` | view last stash content |
+| `$ git stash show -p stash@{1}` | view specific stash content |
 
 ### Commits in git:
 | Command | Description |
