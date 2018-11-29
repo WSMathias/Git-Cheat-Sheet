@@ -7,16 +7,18 @@
 #### These will be reflected as Author details in each commit you make
 
 #### Global config:
-| Command |
-|---------|
-| `$ git config --global user.name "your_username"` |
-| `$ git config --global user.email "your_email"`	|
+| Command | Description |
+|---------|-------------|
+| `$ git config --global user.name "your_username"` | Auther |
+| `$ git config --global user.email "your_email"`	| Auther email |
+| `$ git config --global core.ignorecase false`| Detect changes in filename case change |
 
-#### Local config:
-| Command |
-|---------|
-| `$ git config  user.name "your_username"` |
-| `$ git config  user.email "your_email"`	|
+#### Local config: ( modify config for current project)
+| Command | Description |
+|---------|-------------|
+| `$ git config  user.name "your_username"` | Auther |
+| `$ git config  user.email "your_email"`	| Auther email |
+| `$ git config core.ignorecase false`| Detect changes in filename case change |
 
 ### Adding git to project:
 | Command | Description |
