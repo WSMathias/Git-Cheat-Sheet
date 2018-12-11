@@ -1,5 +1,4 @@
 # Git cheat sheet
-![Alt text](./git.png?raw=true "Git")
 
 | git |  version 2.7.4 |
 |-----|----------------|
@@ -73,7 +72,7 @@
 |---------|-------------|
 | `$ git commit --amend` | Edit last commit message. |
 | `$ git revert <commit_id>` | Rollback to the commit specified by commit_id |
-| `$ git rebase -i HEAD~n` | Select n number of commits, it opens list of commits replace pick by reword to change the commit message of that commit. |
+| `$ git rebase -i HEAD~n` | Opens list of the last n commits,<br>replace _"pick"_ by _"reword"_ to alter the commit message of those commits. |
 | `$ git reset --soft HEAD~n`	| Uncommit last n commits without overwriting the working directory files. |
 | `$ git reset --hard HEAD~n`	| Uncommit last n changes and overwrite the working directory files |
 | `$ git cherry-pick <commit_id>` | Pull commit from any branch by its commit id into current branch |
