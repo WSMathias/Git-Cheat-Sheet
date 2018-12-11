@@ -1,4 +1,5 @@
 # Git cheat sheet
+![Alt text](./git.png?raw=true "Git")
 
 | git |  version 2.7.4 |
 |-----|----------------|
@@ -47,7 +48,7 @@
 | `$ git branch -a` | Show all branches. |
 | `$ git branch <new_branch_name> ` | Create new branch (Will not switch working tree to new branch). |
 | `$ git checkout -b <new_branch_name>` |Create new branch out of current branch and switch to new branch. |
-| `$ git branch -m -<old_branch_name> <new_branch_name>` | Rename branch. |
+| `$ git branch -m <old_branch_name> <new_branch_name>` | Rename branch. |
 | `$ git push <remote_name> <branch_name>` | Push local branch to remote. |
 | `$ git checkout <branch_name>` | Switch to specified branch. |
 | `$ git branch -d <branch_name>` | Delete local branch (replace -d by -D for force delete) |
