@@ -77,7 +77,7 @@
 | `$ git reset --hard HEAD~n`	| Uncommit last n changes and overwrite the working directory files |
 | `$ git cherry-pick <commit_id>` | Pull commit from any branch by its commit id into current branch |
 | `$ git rev-parse --short HEAD` | Print last commit id |
-| `$ git commit --all --amend  | Add current changes to last commit |
+| `$ git commit --all --amend`  | Add current changes to last commit |
 
 ### Merging in git :
 | Command | Description |
