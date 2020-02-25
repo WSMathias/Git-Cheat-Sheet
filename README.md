@@ -114,6 +114,10 @@
 | `$ git log` | List all commits. |
 | `$ git log -n` | The n is number of commits to list |
 
+
+### Time savers  
+`$ git add . && git commit --amend --no-edit && git push --force`
+
 ### Reference:
 ---
 [http://schacon.github.io/git/git.html](http://schacon.github.io/git/git.html)
