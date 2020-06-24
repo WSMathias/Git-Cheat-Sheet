@@ -115,7 +115,8 @@
 | `$ git log -n` | The n is number of commits to list |
 
 
-### Time savers  
+### Time savers
+##### Edit last commit which is already pushed to remote.  
 `$ git add . && git commit --amend --no-edit && git push --force`
 
 ### Reference:
