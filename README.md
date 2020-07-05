@@ -6,19 +6,29 @@
 ### Basic git setup :
 #### These will be reflected as Author details in each commit you make
 
-#### Global config:
+### Git config:
+#### Set Global config:
 | Command | Description |
 |---------|-------------|
 | `$ git config --global user.name "your_username"` | Auther |
 | `$ git config --global user.email "your_email"`	| Auther email |
 | `$ git config --global core.ignorecase false`| Detect changes in filename case change |
+| `$ git config --global init.templatedir '~/.git_template` | Set git template dir ([to configre hooks][git-template-stackoverflow])|
 
-#### Local config: ( modify config for current project)
+#### Set Local config: ( modify config for current project)
 | Command | Description |
 |---------|-------------|
 | `$ git config  user.name "your_username"` | Auther |
 | `$ git config  user.email "your_email"`	| Auther email |
 | `$ git config core.ignorecase false`| Detect changes in filename case change |
+
+#### Unset config:
+| Command | Description |
+|---------|-------------|
+| `$ git config --global --unset <config-key>` | Unset global config  <br>ex: git config --global --unset user.name |
+| `$ git config --unset <config-key>` | Unset local config  <br>ex: git config --unset user.name|
+
+[More operations on config][git-config-stackoverflow]
 
 ### Adding git to project:
 | Command | Description |
@@ -32,6 +42,7 @@
 |---------|-------------|
 | `$ git remote add <remote_name> <remote_address>` | Add remote repository where<br>remote_name: origin,upstream etc<br> remote_address:(url) gethub, bitbucket etc |
 | `$ git remote remove <remote_name>` |	Delete remote |
+| `$ git remote rename origin upstream` | Rename remote |
 | `$ git push <remote_name> <branch-name>` | Push all the commits to remote default branch name master |
 
 ### Synchronizing local with remote (upstream):
@@ -123,4 +134,7 @@
 ### Reference:
 ---
 [http://schacon.github.io/git/git.html](http://schacon.github.io/git/git.html)
+
+[git-template-stackoverflow]: https://stackoverflow.com/questions/2293498/applying-a-git-post-commit-hook-to-all-current-and-future-repos
+[git-config-stackoverflow]: https://stackoverflow.com/questions/11868447/how-can-i-remove-an-entry-in-global-configuration-with-git-config
 
