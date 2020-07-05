@@ -4,14 +4,18 @@
 |-----|----------------|
 
 ### Basic git setup :
-#### These will be reflected as Author details in each commit you make
+
 
 ### Git config:
 #### Set Global config:
+##### These will be reflected as Author details in each commit you make
 | Command | Description |
 |---------|-------------|
 | `$ git config --global user.name "your_username"` | Auther |
 | `$ git config --global user.email "your_email"`	| Auther email |
+
+| Command | Description |
+|---------|-------------|
 | `$ git config --global core.ignorecase false`| Detect changes in filename case change |
 | `$ git config --global init.templatedir '~/.git_template` | Set git template dir ([to configre hooks][git-template-stackoverflow])|
 
