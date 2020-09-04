@@ -135,6 +135,13 @@
 ##### Edit last commit which is already pushed to remote.  
 `$ git add . && git commit --amend --no-edit && git push --force`
 
+### Tips:
+#### Disable terminal screen (oh-my-zsh)
+Add below line to `~/.zshrc` for permanent change.
+```bash
+unset LESS
+```
+
 ### Reference:
 ---
 [http://schacon.github.io/git/git.html](http://schacon.github.io/git/git.html)
