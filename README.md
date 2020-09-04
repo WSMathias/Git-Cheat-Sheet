@@ -16,6 +16,7 @@
 
 | Command | Description |
 |---------|-------------|
+| ` git config --global core.editor "vim"` | Change editor to vim |
 | ` git config --global core.ignorecase false`| Detect changes in filename case change |
 | ` git config --global init.templatedir '~/.git_template` | Set git template dir ([to configre hooks][git-template-stackoverflow])|
 
