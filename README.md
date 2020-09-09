@@ -101,7 +101,7 @@
 |---------|-------------|
 | ` git merge <branch_name>` | Merge any branch into current branch |
 | ` git merge <branch-name> --no-commit` | Merge without merge commit. |
-| ` git pull <remote_name> <branch_name>` | Pull remote branch into local branch. On conflicts it will create merege commit |
+| ` git pull <remote_name> <branch_name>` | Pull from remote branch and merge |
 | ` git checkout <branch_name> -- <file_name>` | Checkout single file from any branch |
 | ` git checkout <branch_name> -- .` | Checkout all the files from any branch |
 
