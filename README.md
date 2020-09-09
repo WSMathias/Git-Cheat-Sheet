@@ -46,6 +46,8 @@
 | Command | Description |
 |---------|-------------|
 | ` git remote add <remote_name> <remote_address>` | Add remote repository where<br>remote_name: origin,upstream etc<br> remote_address:(url) gethub, bitbucket etc |
+| ` git remote set-url origin <remote_address>` | Update remote address |
+| ` git remote rename origin upstream`| Rename remote from origin to upstream |
 | ` git remote remove <remote_name>` |	Delete remote |
 | ` git remote rename origin upstream` | Rename remote |
 | ` git push <remote_name> <branch-name>` | Push all the commits to remote default branch name master |
