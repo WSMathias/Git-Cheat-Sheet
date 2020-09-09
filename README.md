@@ -73,17 +73,16 @@
 
 ### Git stash:
 ##### Save current changes without commiting before doing pull and checkout to other branch
-###### Run following command after `git add <file>`
 | Command | Description |
 |---------|-------------|
-| ` git stash save "message"` | Save chages with give message |
-| ` git stash list` | Show list of stash |
-| ` git stash apply stash@{n}` | Apply stashed file to current branch without deleting from stash, where `n` is the stash number |
+| ` git stash save "message"` | Save chages with give message after running `git add <path>` |
+| ` git stash list` | Show stash list |
 | ` git stash pop` | Apply last stash to current branch and delete stash |
+| ` git stash apply stash@{n}` | Apply `n`th stash without deleting from stash |
+| ` git checkout stash@{n} -- <filename>` | checkout a file from `n`th stash |
 | ` git stash clear` | Clear all stash |
-| ` git checkout stash@{0} -- <filename>` | checkout file from last stash |
 | ` git stash show -p` | view last stash content |
-| ` git stash show -p stash@{1}` | view specific stash content |
+| ` git stash show -p stash@{n}` | view `n`th stash content |
 
 ### Commits in git:
 | Command | Description |
