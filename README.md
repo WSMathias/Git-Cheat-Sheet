@@ -124,6 +124,7 @@
 | Command | Description |
 |---------|-------------|
 | ` git branch --set-upstream-to=<remote_name>/<remote_branch_name> <local_branch_name>` | Set new upstream for the branch. |
+| ` git branch --set-upstream-to=<remote_name>/<remote_branch_name>` | Set new upstream for the current branch. |
 | ` git push -u <remote_name> <branch_name>` | Push to remote branch and set as upstream |
 
 ### List commits in git (log):
