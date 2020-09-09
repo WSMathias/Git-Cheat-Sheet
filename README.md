@@ -99,18 +99,18 @@
 ### Merging in git :
 | Command | Description |
 |---------|-------------|
-| ` git merge <branch_name>` | Merge any branch into current branch (creates merge commit) |
-| ` git merge <branch-name> --no-commit` | Merge without any commit. |
+| ` git merge <branch_name>` | Merge any branch into current branch |
+| ` git merge <branch-name> --no-commit` | Merge without merge commit. |
 | ` git pull <remote_name> <branch_name>` | Pull remote branch into local branch. On conflicts it will create merege commit |
 | ` git checkout <branch_name> -- <file_name>` | Checkout single file from any branch |
-| ` git checkout <branch_name> -- . | Checkout all the files from any branch |
+| ` git checkout <branch_name> -- .` | Checkout all the files from any branch |
 
 ### Fix diverged branches:
 | Command |
 |:-------:|
-| `git rebase <remote_name>/<branch_name>` |
+| `git rebase` | Rebase on default upstrem |
 | or |
-| `git rebase` |
+| `git rebase <remote_name>/<branch_name>` | Rebase on non-upstream remote branch |
 
 ### Caching in git :
 ##### Run these commands after updating gitignore then commit the changes.
