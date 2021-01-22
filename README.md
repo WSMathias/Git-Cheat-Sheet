@@ -138,6 +138,11 @@
 ##### Edit last commit which is already pushed to remote.  
 ` git add . && git commit --amend --no-edit && git push --force`
 
+#### Merge multiple local commits into single commit before pushing to remote
+` git rebase -i HEAD~10`  
+replace `pick` by `fixup` for the commits you wana merge.  
+##### Note: Oldest commit is at the top.
+
 ### Tips:
 #### Disable terminal screen (oh-my-zsh)
 Add below line to `~/.zshrc` for permanent change.
