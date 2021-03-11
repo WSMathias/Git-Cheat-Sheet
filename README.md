@@ -132,6 +132,7 @@
 |---------|-------------|
 | ` git log` | List all commits. |
 | ` git log -n` | The n is number of commits to list |
+| `git log --all --grep='<message content>'` | List/Find commits by message content |
 
 
 ### Time savers
