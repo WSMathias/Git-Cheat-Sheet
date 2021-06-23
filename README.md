@@ -95,7 +95,7 @@
 | ` git cherry-pick <commit_id>` | Pull commit from any branch by its commit id into current branch |
 | ` git rev-parse --short HEAD` | Print last commit id |
 | ` git commit --all --amend`  | Add current changes to last commit |
-| ` git merge-base <branch a> <branch b>` | Get latest common commit id to branch a and branch b |
+| ` git merge-base <branch a> <branch b>` | Get latest common commit id between branch a and branch b |
 
 ### Merging in git :
 | Command | Description |
