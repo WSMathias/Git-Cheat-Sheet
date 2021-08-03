@@ -94,7 +94,7 @@
 | ` git reset --hard HEAD~n`	| Uncommit last n changes and overwrite the working directory files |
 | ` git cherry-pick <commit_id>` | Pull commit from any branch by its commit id into current branch |
 | ` git rev-parse --short HEAD` | Print last commit id |
-| ` git commit --all --amend`  | Add current changes to last commit |
+| ` git commit --all --amend --no-edit`  | Add current changes to last commit |
 | ` git merge-base <branch a> <branch b>` | Get latest common commit id between branch a and branch b |
 
 ### Merging in git :
