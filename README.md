@@ -135,6 +135,12 @@
 | ` git log -n` | The n is number of commits to list |
 | `git log --all --grep='<message content>'` | List/Find commits by message content |
 
+### Managing files:
+| Command | Description |
+|---------|-------------|
+| ` git ls-files --others --exclude-standard` | List all untracked files. |
+| ` git ls-files --modified --exclude-standard` | List all modified files. |
+
 
 ### Time savers
 ##### Edit last commit which is already pushed to remote.  
