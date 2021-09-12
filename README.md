@@ -160,8 +160,8 @@ unset LESS
 
 ### Reference:
 ---
-[http://schacon.github.io/git/git.html](http://schacon.github.io/git/git.html)
-[zsh git aliases](https://github.com/ohmyzsh/ohmyzsh/wiki/Cheatsheet#git)
+- [http://schacon.github.io/git/git.html](http://schacon.github.io/git/git.html)  
+- [zsh git aliases](https://github.com/ohmyzsh/ohmyzsh/wiki/Cheatsheet#git)
 
 [git-template-stackoverflow]: https://stackoverflow.com/questions/2293498/applying-a-git-post-commit-hook-to-all-current-and-future-repos
 [git-config-stackoverflow]: https://stackoverflow.com/questions/11868447/how-can-i-remove-an-entry-in-global-configuration-with-git-config
