@@ -140,6 +140,8 @@
 |---------|-------------|
 | ` git ls-files --others --exclude-standard` | List all untracked files. |
 | ` git ls-files --modified --exclude-standard` | List all modified files. |
+| ` git update-index --assume-unchanged <ignore file>` | Ignore file modification. |
+| ` git update-index --no-assume-unchanged <ignored file>` | Revert above action. |
 
 
 ### Time savers
