@@ -135,6 +135,12 @@
 | ` git log -n` | The n is number of commits to list |
 | `git log --all --grep='<message content>'` | List/Find commits by message content |
 
+### List file activity since last commit:
+| Command | Description |
+|---------|-------------|
+| ` git status` | List all create/modified/deleted/staged files |
+| ` git status . -- ':!dir1' ':!dir2'` | skip status result for the given directories |
+
 ### Managing files:
 | Command | Description |
 |---------|-------------|
