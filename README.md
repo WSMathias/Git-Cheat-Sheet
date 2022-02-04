@@ -135,6 +135,13 @@
 | ` git log -n` | The n is number of commits to list |
 | `git log --all --grep='<message content>'` | List/Find commits by message content |
 
+### git patch
+without author info:
+| Command | Description |
+|---------|-------------|
+| ` git diff > my_chnages.patch ` | Create patch file |
+| ` git apply  my_chnages.patch` | Applying patch file |
+
 ### List file activity since last commit:
 | Command | Description |
 |---------|-------------|
