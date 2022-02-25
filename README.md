@@ -133,7 +133,8 @@
 |---------|-------------|
 | ` git log` | List all commits. |
 | ` git log -n` | The n is number of commits to list |
-| `git log --all --grep='<message content>'` | List/Find commits by message content |
+| ` git log --all --grep='<message content>'` | List/Find commits by message content |
+| ` git log master..newBranch` | List commits that `newBranch` has but `master` doesn't | 
 
 ### git patch
 without author info:
