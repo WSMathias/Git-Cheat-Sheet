@@ -157,7 +157,7 @@ without author info:
 | ` git ls-files --modified --exclude-standard` | List all modified files. |
 | ` git update-index --assume-unchanged <ignore file>` | Ignore file modification. |
 | ` git update-index --no-assume-unchanged <ignored file>` | Revert above action. |
-
+| `git show <branch>:<file>` | Peek into file from diffrent branch. |
 
 ### Time savers
 ##### Edit last commit which is already pushed to remote.  
