@@ -96,6 +96,7 @@
 | ` git rev-parse --short HEAD` | Print last commit id |
 | ` git commit --all --amend --no-edit`  | Add current changes to last commit |
 | ` git merge-base <branch a> <branch b>` | Get latest common commit id between branch a and branch b |
+- [Altering old commit content](https://stackoverflow.com/a/2719636)
 
 ### Merging in git :
 | Command | Description |
