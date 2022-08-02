@@ -137,7 +137,7 @@
 | ` git log --all --grep='<message content>'` | List/Find commits by message content |
 | ` git log master..newBranch` | List commits that `newBranch` has but `master` doesn't | 
 
-### git patch
+### Git patch
 without author info:
 | Command | Description |
 |---------|-------------|
@@ -158,6 +158,14 @@ without author info:
 | ` git update-index --assume-unchanged <ignore file>` | Ignore file modification. |
 | ` git update-index --no-assume-unchanged <ignored file>` | Revert above action. |
 | `git show <branch>:<file>` | Peek into file from diffrent branch. |
+
+### Git worktree:
+Usefull when working on multiple branches locally at the same time  without maintaining multiple clones for each branch.
+| Command | Description |
+|---------|-------------|
+| ` git worktree add ../myProject-master master` | Master branch code can be accessed at `../myProject-master` |
+| ` git worktree list` | list all worktrees from project directory |
+| ` git worktree remove ../myProject-master` | Delete worktree (folder will still be there) |
 
 ### Time savers
 ##### Edit last commit which is already pushed to remote.  
