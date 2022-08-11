@@ -139,9 +139,12 @@
 
 
 ### Git diff
+Note: ref1 and ref2 could be branch names, remotename/branchname, commit SHAs, etc
 | Command | Description |
 |---------|-------------|
-| ` git diff <branch_name> -- <local_path> ` | Show difference between working dir file/ and a local/remote branch  |
+| ` git diff ref1:path/to/file1 ref2:path/to/file2 ` | Show difference between two references |
+| ` git diff -- path/to/file ... origin ` | Show file difference between local file and remote file of the current branch |
+| ` git diff branch_name:path/to/file ` | Simplified version of the above command |
 
 ### Git patch
 without author info:
@@ -193,6 +196,7 @@ unset LESS
 ---
 - [http://schacon.github.io/git/git.html](http://schacon.github.io/git/git.html)  
 - [zsh git aliases](https://github.com/ohmyzsh/ohmyzsh/wiki/Cheatsheet#git)
+- [What is HEAD ?](https://stackoverflow.com/a/54935492/7247089)
 
 [git-template-stackoverflow]: https://stackoverflow.com/questions/2293498/applying-a-git-post-commit-hook-to-all-current-and-future-repos
 [git-config-stackoverflow]: https://stackoverflow.com/questions/11868447/how-can-i-remove-an-entry-in-global-configuration-with-git-config
