@@ -70,6 +70,7 @@
 | ` git checkout <branch_name>` | Switch to specified branch. |
 | ` git branch -d <branch_name>` | Delete local branch (replace -d by -D for force delete) |
 | ` git push <remote_name> :<branch_name>` |Delete remote branch. |
+| ` git branch --contains  <commit_id>` | Search branches containg the given commit id |
 
 ### Git stash:
 ##### Save current changes without commiting before doing pull and checkout to other branch
