@@ -182,7 +182,7 @@ Commands to manage submodules.
 | Command | Description |
 |---------|-------------|
 | ` git submodule add <repo_address> <submodule_path>` | Add new submodule at submodule_path |
-| ` git submodule update --init` | Download all the submodules after cloneing the main repo |
+| ` git submodule update --init` | Download all the submodules after cloning the main repo |
 
 ### Time savers
 ##### Edit last commit which is already pushed to remote.  
