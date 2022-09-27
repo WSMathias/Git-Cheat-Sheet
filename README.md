@@ -177,6 +177,13 @@ Usefull when working on multiple branches locally at the same time  without main
 | ` git worktree list` | list all worktrees from project directory |
 | ` git worktree remove ../myProject-master` | Delete worktree (folder will still be there) |
 
+### Git Submodule:
+Commands to manage submodules.
+| Command | Description |
+|---------|-------------|
+| ` git submodule add <repo_address> <submodule_path>` | Add new submodule at submodule_path |
+| ` git submodule update --init` | Download all the submodules after cloneing the main repo |
+
 ### Time savers
 ##### Edit last commit which is already pushed to remote.  
 ` git add . && git commit --amend --no-edit && git push --force`
