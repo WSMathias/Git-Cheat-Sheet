@@ -184,6 +184,13 @@ Commands to manage submodules.
 | ` git submodule add <repo_address> <submodule_path>` | Add new submodule at submodule_path |
 | ` git submodule update --init` | Download all the submodules after cloning the main repo |
 
+### Git Restore:
+Commands to copy the directory.
+| Command | Description |
+|---------|-------------|
+| ` git restore --source <branch>  dirname ` | Copy the directory from any branch without git history |
+
+
 ### Time savers
 ##### Edit last commit which is already pushed to remote.  
 ` git add . && git commit --amend --no-edit && git push --force`
