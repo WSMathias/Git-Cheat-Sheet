@@ -190,6 +190,12 @@ Commands to copy the directory.
 |---------|-------------|
 | ` git restore --source <branch>  dirname ` | Copy the directory from any branch without git history |
 
+### Git repo maintenance
+Commands keep the local repo clean and faster.
+| Command | Description |
+|---------|-------------|
+| ` git prune ` | Clean up orphaned objects/commits |
+
 
 ### Time savers
 ##### Edit last commit which is already pushed to remote.  
