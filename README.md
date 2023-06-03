@@ -212,7 +212,9 @@ unset LESS
 - [http://schacon.github.io/git/git.html](http://schacon.github.io/git/git.html)  
 - [zsh git aliases](https://github.com/ohmyzsh/ohmyzsh/wiki/Cheatsheet#git)
 - [What is HEAD ?](https://stackoverflow.com/a/54935492/7247089)
+- [git-internals-pdf](https://github.com/pluralsight/git-internals-pdf)
 
 [git-template-stackoverflow]: https://stackoverflow.com/questions/2293498/applying-a-git-post-commit-hook-to-all-current-and-future-repos
 [git-config-stackoverflow]: https://stackoverflow.com/questions/11868447/how-can-i-remove-an-entry-in-global-configuration-with-git-config
+
 
