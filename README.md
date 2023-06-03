@@ -1,7 +1,7 @@
 # Git cheat sheet
 
-| git |  version 2.7.4 |
-|-----|----------------|
+| git | version >= 2.7.4 |
+|-----|------------------|
 
 ### Basic git setup :
 
