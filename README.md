@@ -35,17 +35,17 @@
 
 [More operations on config][git-config-stackoverflow]
 
-### Adding git to project:
+### Adding git to the project:
 | Command | Description |
 |---------|-------------|
-| ` git init .` | Initialize git inside project root directory. |
+| ` git init .` | Initialize git inside the project root directory. |
 | ` git add .` | Stage all files for commit. |
 | ` git commit -m "commit-message"` | Commit staged files to git. |
 
 ### Adding Remote repo to Project:
 | Command | Description |
 |---------|-------------|
-| ` git remote add <remote_name> <remote_address>` | Add remote repository where<br>remote_name: origin,upstream etc<br> remote_address:(url) gethub, bitbucket etc |
+| ` git remote add <remote_name> <remote_address>` | Add remote repository where<br>remote_name: origin,upstream etc<br> remote_address:(url) github, bitbucket etc |
 | ` git remote set-url origin <remote_address>` | Update remote address |
 | ` git remote rename origin upstream`| Rename remote from origin to upstream |
 | ` git remote remove <remote_name>` |	Delete remote |
@@ -56,31 +56,31 @@
 | Command | Description |
 |---------|-------------|
 | ` git fetch` | Download changes from remote without making any changes to files in the working directory. |
-| ` git pull` | Download others commits from remote and apply to working directory. |
+| ` git pull` | Download remote commits from the origin repository configured as upstream for the current branch. |
 | ` git push` | Upload local commits to remote. |
 
 ### Branches in git:
 | Command | Description |
 |---------|-------------|
 | ` git branch -a` | Show all branches. |
-| ` git branch <new_branch_name> ` | Create new branch (Will not switch working tree to new branch). |
-| ` git checkout -b <new_branch_name>` |Create new branch out of current branch and switch to new branch. |
+| ` git branch <new_branch_name> ` | Create a new branch (Will not switch working tree to new branch). |
+| ` git checkout -b <new_branch_name>` |Create a new branch out of the current branch and switch to the new branch. |
 | ` git branch -m <old_branch_name> <new_branch_name>` | Rename branch. |
 | ` git push <remote_name> <branch_name>` | Push local branch to remote. |
 | ` git checkout <branch_name>` | Switch to specified branch. |
 | ` git branch -d <branch_name>` | Delete local branch (replace -d by -D for force delete) |
 | ` git push <remote_name> :<branch_name>` |Delete remote branch. |
-| ` git branch --contains  <commit_id>` | Search branches containg the given commit id |
+| ` git branch --contains  <commit_id>` | Search branches containing the given commit id |
 
 ### Git stash:
-##### Save current changes without commiting before doing pull and checkout to other branch
+##### Save current changes without committing before doing pull and checkout to another branch
 | Command | Description |
 |---------|-------------|
-| ` git stash save "message"` | Save chages with give message after running `git add <path>` |
+| ` git stash save "message"` | Save changes with give message after running `git add <path>` |
 | ` git stash list` | Show stash list |
-| ` git stash pop` | Apply last stash to current branch and delete stash |
+| ` git stash pop` | Apply the last stash to the current branch and delete stash |
 | ` git stash apply stash@{n}` | Apply `n`th stash without deleting from stash |
-| ` git checkout stash@{n} -- <filename>` | checkout a file from `n`th stash |
+| ` git checkout stash@{n} -- <filename>` | check out a file from `n`th stash |
 | ` git stash clear` | Clear all stash |
 | ` git stash show -p` | view last stash content |
 | ` git stash show -p stash@{n}` | view `n`th stash content |
@@ -91,12 +91,12 @@
 | ` git commit --amend` | Edit last commit message. |
 | ` git revert <commit_id>` | Rollback to the commit specified by commit_id |
 | ` git rebase -i HEAD~n` | Opens list of the last n commits,<br>replace _"pick"_ by _"reword"_ to alter the commit message of those commits. |
-| ` git reset --soft HEAD~n`	| Uncommit last n commits without overwriting the working directory files. |
+| ` git reset --soft HEAD~n`	| Uncommit the last n commits without overwriting the working directory files. |
 | ` git reset --hard HEAD~n`	| Uncommit last n changes and overwrite the working directory files |
-| ` git cherry-pick <commit_id>` | Pull commit from any branch by its commit id into current branch |
+| ` git cherry-pick <commit_id>` | Pull commit from any branch by its commit id into the current branch |
 | ` git rev-parse --short HEAD` | Print last commit id |
 | ` git commit --all --amend --no-edit`  | Add current changes to last commit |
-| ` git merge-base <branch a> <branch b>` | Get latest common commit id between branch a and branch b |
+| ` git merge-base <branch a> <branch b>` | Get the latest common commit id between branch a and branch b |
 - [Altering old commit content](https://stackoverflow.com/a/2719636)
 
 ### Merging in git :
@@ -116,14 +116,14 @@
 | `git rebase <remote_name>/<branch_name>` | Rebase on non-upstream remote branch |
 
 ### Caching in git :
-##### Run these commands after updating gitignore then commit the changes.
+##### Run these commands after updating gitignore, then commit the changes.
 | Command | Description |
 |---------|-------------|
 | `git rm --cached <filename>` | Remove specific file from git cache |
 | `git rm -r --cached .` | Remove all files from git cache |
 
 ### Upstream in git :
-##### Upstream is used when we have multiple repositories for single project
+##### Upstream is used when we have multiple repositories for a single project
 | Command | Description |
 |---------|-------------|
 | ` git branch --set-upstream-to=<remote_name>/<remote_branch_name> <local_branch_name>` | Set new upstream for the branch. |
@@ -144,7 +144,7 @@ Note: ref1 and ref2 could be branch names, remotename/branchname, commit SHAs, e
 | Command | Description |
 |---------|-------------|
 | ` git diff ref1:path/to/file1 ref2:path/to/file2 ` | Show difference between two references |
-| ` git diff -- path/to/file ... origin ` | Show file difference between local file and remote file of the current branch |
+| ` git diff -- path/to/file ... origin ` | Show file difference between the local file and remote file of the current branch |
 | ` git diff branch_name:path/to/file ` | Simplified version of the above command |
 
 ### Git patch
@@ -154,7 +154,7 @@ without author info:
 | ` git diff > my_chnages.patch ` | Create patch file |
 | ` git apply  my_chnages.patch` | Applying patch file |
 
-### List file activity since last commit:
+### List file activity since the last commit:
 | Command | Description |
 |---------|-------------|
 | ` git status` | List all create/modified/deleted/staged files |
@@ -170,7 +170,7 @@ without author info:
 | `git show <branch>:<file>` | Peek into file from diffrent branch. |
 
 ### Git worktree:
-Usefull when working on multiple branches locally at the same time  without maintaining multiple clones for each branch.
+Useful when working on multiple branches locally at the same time  without maintaining multiple clones for each branch.
 | Command | Description |
 |---------|-------------|
 | ` git worktree add ../myProject-master master` | Master branch code can be accessed at `../myProject-master` |
@@ -182,7 +182,7 @@ Commands to manage submodules.
 | Command | Description |
 |---------|-------------|
 | ` git submodule add <repo_address> <submodule_path>` | Add new submodule at submodule_path |
-| ` git submodule update --init` | Download all the submodules after cloning the main repo also resets submodule commit to the parent commit |
+| ` git submodule update --init` | Download all the submodules after cloning the main repo and also resets the submodule commit to the parent commit |
 
 ### Git Restore:
 Commands to copy the directory.
@@ -198,17 +198,17 @@ Commands keep the local repo clean and faster.
 
 
 ### Time savers
-##### Edit last commit which is already pushed to remote.  
+##### Edit the last commit which is already pushed to remote.  
 ` git add . && git commit --amend --no-edit && git push --force`
 
-#### Merge multiple local commits into single commit before pushing to remote
+#### Merge multiple local commits into a single commit before pushing to remote
 ` git rebase -i HEAD~10`  
-replace `pick` by `fixup` for the commits you wana merge.  
+replace `pick` by `fixup` for the commits you want to merge.  
 ##### Note: Oldest commit is at the top.
 
 ### Tips:
 #### Disable terminal screen (oh-my-zsh)
-Add below line to `~/.zshrc` for permanent change.
+Add the below line to `~/.zshrc` for permanent change.
 ```bash
 unset LESS
 ```
