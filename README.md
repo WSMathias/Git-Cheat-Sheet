@@ -176,6 +176,7 @@ Useful when working on multiple branches locally at the same time  without maint
 | ` git worktree add ../myProject-master master` | Master branch code can be accessed at `../myProject-master` |
 | ` git worktree list` | list all worktrees from project directory |
 | ` git worktree remove ../myProject-master` | Delete worktree (folder will still be there) |
+| ` git worktree repair ../new/worktree/path` | Repair worktree after moving worktree or bare repository locally to different location|
 
 ### Git Submodule:
 Commands to manage submodules.
