@@ -64,7 +64,8 @@
 |---------|-------------|
 | ` git branch -a` | Show all branches. |
 | ` git branch <new_branch_name> ` | Create a new branch (Will not switch working tree to new branch). |
-| ` git checkout -b <new_branch_name>` |Create a new branch out of the current branch and switch to the new branch. |
+| ` git checkout -b <new_branch_name>` | Create a new branch out of the current branch and switch to the new branch. |
+| ` git checkout --orphan <new_branch_name>` | Create a new branch without any parent commit (empty branch) |
 | ` git branch -m <old_branch_name> <new_branch_name>` | Rename branch. |
 | ` git push <remote_name> <branch_name>` | Push local branch to remote. |
 | ` git checkout <branch_name>` | Switch to specified branch. |
