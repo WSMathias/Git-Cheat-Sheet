@@ -117,11 +117,25 @@
 | `git rebase <remote_name>/<branch_name>` | Rebase on non-upstream remote branch |
 
 ### Caching in git :
-##### Run these commands after updating gitignore, then commit the changes.
+##### Run these commands after updating the .gitignore file and then commit the changes.
 | Command | Description |
 |---------|-------------|
 | `git rm --cached <filename>` | Remove specific file from git cache |
 | `git rm -r --cached .` | Remove all files from git cache |
+
+### Tags in git
+#### Taggign is widely used to create releases and mark milestones
+| Command | Description |
+|---------|-------------|
+| `git tag -l` | List all the tags |
+| `git tag -a <tagname> -m <message>`| Create an annotated tag, with detailed info about the tagger |
+| `git tag <tagname>` | Create a lightweight tag, tag with only a reference to commit |
+| `git tag -l "v1.0.*"` | List all the tags matching given pattern |
+| `git show <tagname>` | View tag details |
+| `git push origin <tagname>` | Transfer tag to remote |
+| `git push origin --tags` | Transfer all local tags to remote |
+| `git tag -d <tagname>` | Delete local tag |
+| `git push origin --delete <tagname>`| Delete remote tag |
 
 ### Upstream in git :
 ##### Upstream is used when we have multiple repositories for a single project
