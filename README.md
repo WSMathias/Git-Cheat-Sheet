@@ -7,31 +7,24 @@
 
 
 ### Git config:
-#### Set Global config:
+#### Set Global config (Omit `--global` to lit config to current repo)
 ##### These will be reflected as Author details in each commit you make
 | Command | Description |
 |---------|-------------|
-| ` git config --global user.name "your_username"` | Auther |
-| ` git config --global user.email "your_email"`	 | Auther email |
+| ` git config --global user.name "your_username"`   | Author |
+| ` git config --global user.email "your_email"`	 | Author email |
 
 | Command | Description |
 |---------|-------------|
 | ` git config --global core.editor "vim"`                 | Change editor to vim |
 | ` git config --global core.ignorecase false`             | Detect changes in filename case change |
-| ` git config --global init.templatedir '~/.git_template` | Set git template dir ([to configre hooks][git-template-stackoverflow])|
+| ` git config --global init.templatedir '~/.git_template` | Set git template dir ([to configure hooks][git-template-stackoverflow])|
 
 #### Git alias to create custom command shortcuts
 | Command | Description |
 |---------|-------------|
 | ` git config --global alias.<short-alias> 'full command'`  | Create a new git alias in the form of a new git command |
 | ` git config --global alias.ucc 'commit --amend --no-edit'`| Run `git ucc` instead of `git commit --amend --no-edit` |
-
-#### Set Local config: ( modify config for the current project)
-| Command | Description |
-|---------|-------------|
-| ` git config  user.name "your_username"` | Auther |
-| ` git config  user.email "your_email"`	 | Auther email |
-| ` git config core.ignorecase false`      | Detect changes in filename case change |
 
 #### Unset config:
 | Command | Description |
@@ -118,7 +111,7 @@
 ### Fix diverged branches:
 |Option| Command |
 |:--:|:-------:|
-| 1  | `git rebase`                             | Rebase on default upstrem |
+| 1  | `git rebase`                             | Rebase on default upstream |
 | 2  | `git rebase <remote_name>/<branch_name>` | Rebase on non-upstream remote branch |
 
 ### Caching in git :
@@ -171,8 +164,8 @@ Note: ref1 and ref2 could be `branchNames`, `remoteName/branchName`, commit `SHA
 without author info:
 | Command | Description |
 |---------|-------------|
-| ` git diff > my_chnages.patch ` | Create patch file |
-| ` git apply  my_chnages.patch`  | Applying patch file |
+| ` git diff > my_changes.patch ` | Create patch file |
+| ` git apply  my_changes.patch`  | Applying patch file |
 
 ### List file activity since the last commit:
 | Command | Description |
@@ -187,7 +180,7 @@ without author info:
 | ` git ls-files --modified --exclude-standard`            | List all modified files. |
 | ` git update-index --assume-unchanged <ignore file>`     | Ignore file modification. |
 | ` git update-index --no-assume-unchanged <ignored file>` | Revert above action. |
-| `git show <branch>:<file>`                               | Peek into file from diffrent branch. |
+| `git show <branch>:<file>`                               | Peek into file from different branch. |
 
 ### Git worktree:
 It is useful when working on multiple branches simultaneously without maintaining multiple clones for each branch.
