@@ -20,6 +20,12 @@
 | ` git config --global core.ignorecase false`             | Detect changes in filename case change |
 | ` git config --global init.templatedir '~/.git_template` | Set git template dir ([to configre hooks][git-template-stackoverflow])|
 
+#### Git alias to create custom command shortcuts
+| Command | Description |
+|---------|-------------|
+| ` git config --global alias.<short-alias> 'full command'`  | Create a new git alias in the form of a new git command |
+| ` git config --global alias.ucc 'commit --amend --no-edit'`| Run `git ucc` instead of `git commit --amend --no-edit` |
+
 #### Set Local config: ( modify config for the current project)
 | Command | Description |
 |---------|-------------|
