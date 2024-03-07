@@ -32,6 +32,11 @@
 | ` git config --global --unset <config-key>` | Unset global config  <br>ex: git config --global --unset user.name |
 | ` git config --unset <config-key>`          | Unset local config  <br>ex: git config --unset user.name|
 
+#### Troubleshoot git config
+| Command | Description |
+|---------|-------------|
+| `git config --list --show-origin` | List all the configs and their location |
+
 [More operations on config][git-config-stackoverflow]
 
 ### Adding git to the project:
