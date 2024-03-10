@@ -1,0 +1,1035 @@
+
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <title>Read Me</title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <style>
+            body {
+  font: 400 16px/1.5 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #111;
+  background-color: #fdfdfd;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: 'kern' 1;
+  -moz-font-feature-settings: 'kern' 1;
+  -o-font-feature-settings: 'kern' 1;
+  font-feature-settings: 'kern' 1;
+  font-kerning: normal;
+  padding: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 5px;
+  }
+
+  main {
+    padding: 0px 20px 20px 20px !important;
+  }
+}
+
+main {
+  margin: 0px;
+  max-width: 900px;
+  border: 1px solid #e1e4e8;
+  padding: 10px 40px;
+  padding-bottom: 20px;
+  border-radius: 2px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+hr {
+  color: #bbb;
+  background-color: #bbb;
+  height: 1px;
+  flex: 0 1 auto;
+  margin: 1em 0;
+  padding: 0;
+  border: none;
+}
+
+/**
+ * Links
+ */
+a {
+  color: #0366d6;
+  text-decoration: none;
+}
+a:visited {
+  color: #0366d6;
+}
+a:hover {
+  color: #0366d6;
+  text-decoration: underline;
+}
+
+pre {
+  background-color: #f6f8fa;
+  border-radius: 3px;
+  font-size: 85%;
+  line-height: 1.45;
+  overflow: auto;
+  padding: 16px;
+}
+
+/**
+  * Code blocks
+  */
+
+code {
+  background-color: rgba(27, 31, 35, 0.05);
+  border-radius: 3px;
+  font-size: 85%;
+  margin: 0;
+  word-wrap: break-word;
+  padding: 0.2em 0.4em;
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier,
+    monospace;
+}
+
+pre > code {
+  background-color: transparent;
+  border: 0;
+  display: inline;
+  line-height: inherit;
+  margin: 0;
+  overflow: visible;
+  padding: 0;
+  word-wrap: normal;
+  font-size: 100%;
+}
+
+/**
+ * Blockquotes
+ */
+blockquote {
+  margin-left: 30px;
+  margin-top: 0px;
+  margin-bottom: 16px;
+  border-left-width: 3px;
+  padding: 0 1em;
+  color: #828282;
+  border-left: 4px solid #e8e8e8;
+  padding-left: 15px;
+  font-size: 18px;
+  letter-spacing: -1px;
+  font-style: italic;
+}
+blockquote * {
+  font-style: normal !important;
+  letter-spacing: 0;
+  color: #6a737d !important;
+}
+
+/**
+ * Tables
+ */
+table {
+  border-spacing: 2px;
+  display: block;
+  font-size: 14px;
+  overflow: auto;
+  width: 100%;
+  margin-bottom: 16px;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+
+th {
+  font-weight: 600;
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+}
+
+tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+/**
+ * Others
+ */
+
+img {
+  max-width: 100%;
+}
+
+p {
+  line-height: 24px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #24292e;
+}
+
+ul {
+  margin-top: 0;
+}
+
+li {
+  color: #24292e;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+li + li {
+  margin-top: 0.25em;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  color: #24292e;
+}
+
+a:visited {
+  color: #0366d6;
+}
+
+h1,
+h2,
+h3 {
+  border-bottom: 1px solid #eaecef;
+  color: #111;
+  /* Darker */
+}
+
+            </style>
+            <style>
+            pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+code.hljs {
+  padding: 3px 5px
+}
+/*!
+  Theme: GitHub
+  Description: Light theme as seen on github.com
+  Author: github.com
+  Maintainer: @Hirse
+  Updated: 2021-05-15
+
+  Outdated base version: https://github.com/primer/github-syntax-light
+  Current colors taken from GitHub's CSS
+*/
+.hljs {
+  color: #24292e;
+  background: #ffffff
+}
+.hljs-doctag,
+.hljs-keyword,
+.hljs-meta .hljs-keyword,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable.language_ {
+  /* prettylights-syntax-keyword */
+  color: #d73a49
+}
+.hljs-title,
+.hljs-title.class_,
+.hljs-title.class_.inherited__,
+.hljs-title.function_ {
+  /* prettylights-syntax-entity */
+  color: #6f42c1
+}
+.hljs-attr,
+.hljs-attribute,
+.hljs-literal,
+.hljs-meta,
+.hljs-number,
+.hljs-operator,
+.hljs-variable,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-id {
+  /* prettylights-syntax-constant */
+  color: #005cc5
+}
+.hljs-regexp,
+.hljs-string,
+.hljs-meta .hljs-string {
+  /* prettylights-syntax-string */
+  color: #032f62
+}
+.hljs-built_in,
+.hljs-symbol {
+  /* prettylights-syntax-variable */
+  color: #e36209
+}
+.hljs-comment,
+.hljs-code,
+.hljs-formula {
+  /* prettylights-syntax-comment */
+  color: #6a737d
+}
+.hljs-name,
+.hljs-quote,
+.hljs-selector-tag,
+.hljs-selector-pseudo {
+  /* prettylights-syntax-entity-tag */
+  color: #22863a
+}
+.hljs-subst {
+  /* prettylights-syntax-storage-modifier-import */
+  color: #24292e
+}
+.hljs-section {
+  /* prettylights-syntax-markup-heading */
+  color: #005cc5;
+  font-weight: bold
+}
+.hljs-bullet {
+  /* prettylights-syntax-markup-list */
+  color: #735c0f
+}
+.hljs-emphasis {
+  /* prettylights-syntax-markup-italic */
+  color: #24292e;
+  font-style: italic
+}
+.hljs-strong {
+  /* prettylights-syntax-markup-bold */
+  color: #24292e;
+  font-weight: bold
+}
+.hljs-addition {
+  /* prettylights-syntax-markup-inserted */
+  color: #22863a;
+  background-color: #f0fff4
+}
+.hljs-deletion {
+  /* prettylights-syntax-markup-deleted */
+  color: #b31d28;
+  background-color: #ffeef0
+}
+.hljs-char.escape_,
+.hljs-link,
+.hljs-params,
+.hljs-property,
+.hljs-punctuation,
+.hljs-tag {
+  /* purposely ignored */
+  
+}
+            </style>
+          </head>
+          <body>
+            <main>
+        <h1 id="git-cheat-sheet">Git cheat sheet</h1>
+<table>
+<thead>
+<tr>
+<th id="git">git</th>
+<th id="version_>=_2.28">version &gt;= 2.28</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<h3 id="basic-git-setup-">Basic git setup :</h3>
+<h3 id="git-config">Git config:</h3>
+<h4 id="set-global-config-omit---global-to-lit-config-to-current-repo">Set Global config (Omit <code>--global</code> to lit config to current repo)</h4>
+<h5 id="these-will-be-reflected-as-author-details-in-each-commit-you-make">These will be reflected as Author details in each commit you make</h5>
+<table>
+<thead>
+<tr>
+<th id="command">Command</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git config --global user.name "your_username"</code></td>
+<td>Author</td>
+</tr>
+<tr>
+<td><code>git config --global user.email "your_email"</code></td>
+<td>Author email</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th id="command">Command</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git config --global core.editor "vim"</code></td>
+<td>Change editor to vim</td>
+</tr>
+<tr>
+<td><code>git config --global core.ignorecase false</code></td>
+<td>Detect changes in filename case change</td>
+</tr>
+<tr>
+<td><code>git config --global init.templatedir '~/.git_template</code></td>
+<td>Set git template dir (<a href="https://stackoverflow.com/questions/2293498/applying-a-git-post-commit-hook-to-all-current-and-future-repos">to configure hooks</a>)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="git-alias-to-create-custom-command-shortcuts">Git alias to create custom command shortcuts</h4>
+<table>
+<thead>
+<tr>
+<th id="command">Command</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git config --global alias.&lt;short-alias&gt; 'full command'</code></td>
+<td>Create a new git alias in the form of a new git command</td>
+</tr>
+<tr>
+<td><code>git config --global alias.ucc 'commit --amend --no-edit'</code></td>
+<td>Run <code>git ucc</code> instead of <code>git commit --amend --no-edit</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="unset-config">Unset config:</h4>
+<table>
+<thead>
+<tr>
+<th id="command">Command</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git config --global --unset &lt;config-key&gt;</code></td>
+<td>Unset global config  <br>ex: git config --global --unset user.name</td>
+</tr>
+<tr>
+<td><code>git config --unset &lt;config-key&gt;</code></td>
+<td>Unset local config  <br>ex: git config --unset user.name</td>
+</tr>
+</tbody>
+</table>
+<h4 id="troubleshoot-git-config">Troubleshoot git config</h4>
+<table>
+<thead>
+<tr>
+<th id="command">Command</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git config --list --show-origin</code></td>
+<td>List all the configs and their location</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://stackoverflow.com/questions/11868447/how-can-i-remove-an-entry-in-global-configuration-with-git-config">More operations on config</a></p>
+<h3 id="adding-git-to-the-project">Adding git to the project:</h3>
+<table>
+<thead>
+<tr>
+<th id="command">Command</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git init .</code></td>
+<td>Initialize git inside the project root directory.</td>
+</tr>
+<tr>
+<td><code>git add .</code></td>
+<td>Stage all files for commit when run from the root directory</td>
+</tr>
+<tr>
+<td><code>git commit -m "commit-message"</code></td>
+<td>Commit staged files to git.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="adding-remote-repo-to-project">Adding Remote repo to Project:</h3>
+<table>
+<thead>
+<tr>
+<th id="command">Command</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git remote add &lt;remote_name&gt; &lt;remote_address&gt;</code></td>
+<td>Add remote repository where<br>remote_name: origin,upstream etc<br> remote_address:(URL) Github, Bitbucket etc</td>
+</tr>
+<tr>
+<td><code>git remote set-url origin &lt;remote_address&gt;</code></td>
+<td>Update remote address</td>
+</tr>
+<tr>
+<td><code>git remote rename origin upstream</code></td>
+<td>Rename remote from origin to upstream</td>
+</tr>
+<tr>
+<td><code>git remote remove &lt;remote_name&gt;</code></td>
+<td>Delete remote</td>
+</tr>
+<tr>
+<td><code>git remote rename origin upstream</code></td>
+<td>Rename remote</td>
+</tr>
+<tr>
+<td><code>git push &lt;remote_name&gt; &lt;branch-name&gt;</code></td>
+<td>Push all the commits to remote default branch name master</td>
+</tr>
+</tbody>
+</table>
+<h3 id="synchronizing-local-with-remote-upstream">Synchronizing local with remote (upstream):</h3>
+<table>
+<thead>
+<tr>
+<th id="command">Command</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git fetch</code></td>
+<td>Download changes from remote (default <code>origin</code>) without making any changes to files in the working directory.</td>
+</tr>
+<tr>
+<td><code>git pull</code></td>
+<td>Download remote commits from the origin repository configured as upstream for the current branch.</td>
+</tr>
+<tr>
+<td><code>git push</code></td>
+<td>Upload local commits to remote.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="branches-in-git">Branches in git:</h3>
+<table>
+<thead>
+<tr>
+<th id="command">Command</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git branch -a</code></td>
+<td>Show all branches.</td>
+</tr>
+<tr>
+<td><code>git branch &lt;new_branch_name&gt;</code></td>
+<td>Create a new branch (Will not switch working tree to new branch).</td>
+</tr>
+<tr>
+<td><code>git checkout -b &lt;new_branch_name&gt;</code></td>
+<td>Create a new branch out of the current branch and switch to the new branch.</td>
+</tr>
+<tr>
+<td><code>git checkout --orphan &lt;new_branch_name&gt;</code></td>
+<td>Create a new branch without any parent commit (empty branch)</td>
+</tr>
+<tr>
+<td><code>git branch -m &lt;old_branch_name&gt; &lt;new_branch_name&gt;</code></td>
+<td>Rename branch.</td>
+</tr>
+<tr>
+<td><code>git push &lt;remote_name&gt; &lt;branch_name&gt;</code></td>
+<td>Push local branch to remote.</td>
+</tr>
+<tr>
+<td><code>git checkout &lt;branch_name&gt;</code></td>
+<td>Switch to specified branch.</td>
+</tr>
+<tr>
+<td><code>git branch -d &lt;branch_name&gt;</code></td>
+<td>Delete local branch (replace -d by -D for force delete)</td>
+</tr>
+<tr>
+<td><code>git push &lt;remote_name&gt; :&lt;branch_name&gt;</code></td>
+<td>Delete remote branch.</td>
+</tr>
+<tr>
+<td><code>git branch --contains  &lt;commit_id&gt;</code></td>
+<td>Search branches containing the given commit id</td>
+</tr>
+</tbody>
+</table>
+<h3 id="git-stash">Git stash:</h3>
+<h5 id="save-current-changes-without-committing-before-doing-pull-and-checkout-to-another-branch">Save current changes without committing before doing pull and checkout to another branch</h5>
+<table>
+<thead>
+<tr>
+<th id="command">Command</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git stash save "message"</code></td>
+<td>Save changes with give message after running <code>git add &lt;path&gt;</code></td>
+</tr>
+<tr>
+<td><code>git stash list</code></td>
+<td>Show stash list</td>
+</tr>
+<tr>
+<td><code>git stash pop</code></td>
+<td>Apply the last stash to the current branch and delete stash</td>
+</tr>
+<tr>
+<td><code>git stash apply stash@{n}</code></td>
+<td>Apply <code>n</code>th stash without deleting from stash</td>
+</tr>
+<tr>
+<td><code>git checkout stash@{n} -- &lt;filename&gt;</code></td>
+<td>check out a file from <code>n</code>th stash</td>
+</tr>
+<tr>
+<td><code>git stash clear</code></td>
+<td>Clear all stash</td>
+</tr>
+<tr>
+<td><code>git stash show -p</code></td>
+<td>view last stash content</td>
+</tr>
+<tr>
+<td><code>git stash show -p stash@{n}</code></td>
+<td>view <code>n</code>th stash content</td>
+</tr>
+</tbody>
+</table>
+<h3 id="commits-in-git">Commits in git:</h3>
+<table>
+<thead>
+<tr>
+<th id="command">Command</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git commit --amend</code></td>
+<td>Edit last commit message.</td>
+</tr>
+<tr>
+<td><code>git revert &lt;commit_id&gt;</code></td>
+<td>Rollback to the commit specified by commit_id</td>
+</tr>
+<tr>
+<td><code>git rebase -i HEAD~n</code></td>
+<td>Opens list of the last n commits,<br>replace <em>"pick"</em> by <em>"reword"</em> to alter the commit message of those commits.</td>
+</tr>
+<tr>
+<td><code>git reset --soft HEAD~n</code></td>
+<td>Uncommit the last n commits without overwriting the working directory files.</td>
+</tr>
+<tr>
+<td><code>git reset --hard HEAD~n</code></td>
+<td>Uncommit last n changes and overwrite the working directory files</td>
+</tr>
+<tr>
+<td><code>git cherry-pick &lt;commit_id&gt;</code></td>
+<td>Pull commit from any branch by its commit id into the current branch</td>
+</tr>
+<tr>
+<td><code>git rev-parse --short HEAD</code></td>
+<td>Print last commit id</td>
+</tr>
+<tr>
+<td><code>git commit --all --amend --no-edit</code></td>
+<td>Add current changes to last commit</td>
+</tr>
+<tr>
+<td><code>git merge-base &lt;branch A&gt; &lt;branch B&gt;</code></td>
+<td>Get the latest common commit ID between branch <code>A</code> and branch <code>B</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><a href="https://stackoverflow.com/a/2719636">Altering old commit content</a></li>
+</ul>
+<h3 id="merging-in-git-">Merging in git :</h3>
+<table>
+<thead>
+<tr>
+<th id="command">Command</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git merge &lt;branch_name&gt;</code></td>
+<td>Merge any branch into current branch</td>
+</tr>
+<tr>
+<td><code>git merge &lt;branch-name&gt; --no-commit</code></td>
+<td>Merge without merge commit.</td>
+</tr>
+<tr>
+<td><code>git pull &lt;remote_name&gt; &lt;branch_name&gt;</code></td>
+<td>Pull from remote branch and merge</td>
+</tr>
+<tr>
+<td><code>git checkout &lt;branch_name&gt; -- &lt;file_name&gt;</code></td>
+<td>Checkout single file from any branch</td>
+</tr>
+<tr>
+<td><code>git checkout &lt;branch_name&gt; -- .</code></td>
+<td>Checkout all the files from any branch</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fix-diverged-branches">Fix diverged branches:</h3>
+<table>
+<thead>
+<tr>
+<th id="option" style="text-align:center;">Option</th>
+<th id="command" style="text-align:center;">Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">1</td>
+<td style="text-align:center;"><code>git rebase</code></td>
+</tr>
+<tr>
+<td style="text-align:center;">2</td>
+<td style="text-align:center;"><code>git rebase &lt;remote_name&gt;/&lt;branch_name&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="caching-in-git-">Caching in git :</h3>
+<h5 id="run-these-commands-after-updating-the-gitignore-file-and-then-commit-the-changes">Run these commands after updating the .gitignore file and then commit the changes.</h5>
+<table>
+<thead>
+<tr>
+<th id="command">Command</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git rm --cached &lt;filename&gt;</code></td>
+<td>Remove specific file from git cache</td>
+</tr>
+<tr>
+<td><code>git rm -r --cached .</code></td>
+<td>Remove all files from git cache</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tags-in-git">Tags in git</h3>
+<h4 id="taggign-is-widely-used-to-create-releases-and-mark-milestones">Taggign is widely used to create releases and mark milestones</h4>
+<table>
+<thead>
+<tr>
+<th id="command">Command</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git tag -l</code></td>
+<td>List all the tags</td>
+</tr>
+<tr>
+<td><code>git tag -a &lt;tagname&gt; -m &lt;message&gt;</code></td>
+<td>Create an annotated tag, with detailed info about the tagger</td>
+</tr>
+<tr>
+<td><code>git tag &lt;tagname&gt;</code></td>
+<td>Create a lightweight tag, tag with only a reference to commit</td>
+</tr>
+<tr>
+<td><code>git tag -l "v1.0.*"</code></td>
+<td>List all the tags matching given pattern</td>
+</tr>
+<tr>
+<td><code>git show &lt;tagname&gt;</code></td>
+<td>View tag details</td>
+</tr>
+<tr>
+<td><code>git push origin &lt;tagname&gt;</code></td>
+<td>Transfer tag to remote</td>
+</tr>
+<tr>
+<td><code>git push origin --tags</code></td>
+<td>Transfer all local tags to remote</td>
+</tr>
+<tr>
+<td><code>git tag -d &lt;tagname&gt;</code></td>
+<td>Delete local tag</td>
+</tr>
+<tr>
+<td><code>git push origin --delete &lt;tagname&gt;</code></td>
+<td>Delete remote tag</td>
+</tr>
+</tbody>
+</table>
+<h3 id="upstream-in-git-">Upstream in git :</h3>
+<h5 id="upstream-is-used-when-we-have-multiple-repositories-for-a-single-project">Upstream is used when we have multiple repositories for a single project</h5>
+<table>
+<thead>
+<tr>
+<th id="command">Command</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git branch --set-upstream-to=&lt;remote_name&gt;/&lt;remote_branch_name&gt; &lt;local_branch_name&gt;</code></td>
+<td>Set new upstream for the branch.</td>
+</tr>
+<tr>
+<td><code>git branch --set-upstream-to=&lt;remote_name&gt;/&lt;remote_branch_name&gt;</code></td>
+<td>Set new upstream for the current branch.</td>
+</tr>
+<tr>
+<td><code>git push -u &lt;remote_name&gt; &lt;branch_name&gt;</code></td>
+<td>Push to remote branch and set as upstream</td>
+</tr>
+</tbody>
+</table>
+<h3 id="list-commits-in-git-log">List commits in git (log):</h3>
+<table>
+<thead>
+<tr>
+<th id="command">Command</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git log</code></td>
+<td>List all commits (comprehensive)</td>
+</tr>
+<tr>
+<td><code>git log --oneline</code></td>
+<td>Lit all commits (brief)</td>
+</tr>
+<tr>
+<td><code>git log -n</code></td>
+<td>The n is number of commits to list</td>
+</tr>
+<tr>
+<td><code>git log --all --grep='&lt;message content&gt;'</code></td>
+<td>List/Find commits by message content</td>
+</tr>
+<tr>
+<td><code>git log master..newBranch</code></td>
+<td>List commits that <code>newBranch</code> has but <code>master</code> doesn't</td>
+</tr>
+</tbody>
+</table>
+<h3 id="git-diff">Git diff</h3>
+<p>Note: ref1 and ref2 could be <code>branchNames</code>, <code>remoteName/branchName</code>, commit <code>SHAs</code>, etc</p>
+<table>
+<thead>
+<tr>
+<th id="command">Command</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git diff ref1:path/to/file1 ref2:path/to/file2</code></td>
+<td>Show difference between two references</td>
+</tr>
+<tr>
+<td><code>git diff -- path/to/file ... origin</code></td>
+<td>Show file difference between the local file and remote file of the current branch</td>
+</tr>
+<tr>
+<td><code>git diff branch_name:path/to/file</code></td>
+<td>Simplified version of the above command</td>
+</tr>
+</tbody>
+</table>
+<h3 id="git-patch">Git patch</h3>
+<p>without author info:</p>
+<table>
+<thead>
+<tr>
+<th id="command">Command</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git diff &gt; my_changes.patch</code></td>
+<td>Create patch file</td>
+</tr>
+<tr>
+<td><code>git apply  my_changes.patch</code></td>
+<td>Applying patch file</td>
+</tr>
+</tbody>
+</table>
+<h3 id="list-file-activity-since-the-last-commit">List file activity since the last commit:</h3>
+<table>
+<thead>
+<tr>
+<th id="command">Command</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git status</code></td>
+<td>List all created/modified/deleted/staged files</td>
+</tr>
+<tr>
+<td><code>git status . -- ':!dir1' ':!dir2'</code></td>
+<td>skip status result for the given directories</td>
+</tr>
+</tbody>
+</table>
+<h3 id="managing-files">Managing files:</h3>
+<table>
+<thead>
+<tr>
+<th id="command">Command</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git ls-files --others --exclude-standard</code></td>
+<td>List all untracked files.</td>
+</tr>
+<tr>
+<td><code>git ls-files --modified --exclude-standard</code></td>
+<td>List all modified files.</td>
+</tr>
+<tr>
+<td><code>git update-index --assume-unchanged &lt;ignore file&gt;</code></td>
+<td>Ignore file modification.</td>
+</tr>
+<tr>
+<td><code>git update-index --no-assume-unchanged &lt;ignored file&gt;</code></td>
+<td>Revert above action.</td>
+</tr>
+<tr>
+<td><code>git show &lt;branch&gt;:&lt;file&gt;</code></td>
+<td>Peek into file from different branch.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="git-worktree">Git worktree:</h3>
+<p>It is useful when working on multiple branches simultaneously without maintaining multiple clones for each branch.</p>
+<table>
+<thead>
+<tr>
+<th id="command">Command</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git worktree add ../myProject-master master</code></td>
+<td>Master branch code can be accessed at <code>../myProject-master</code></td>
+</tr>
+<tr>
+<td><code>git worktree list</code></td>
+<td>list all worktrees from project directory</td>
+</tr>
+<tr>
+<td><code>git worktree remove ../myProject-master</code></td>
+<td>Delete worktree (folder will still be there)</td>
+</tr>
+<tr>
+<td><code>git worktree repair ../new/worktree/path</code></td>
+<td>Repair worktree after moving worktree or bare repository locally to a different location</td>
+</tr>
+</tbody>
+</table>
+<h3 id="git-submodule">Git Submodule:</h3>
+<p>Commands to manage submodules.</p>
+<table>
+<thead>
+<tr>
+<th id="command">Command</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git submodule add &lt;repo_address&gt; &lt;submodule_path&gt;</code></td>
+<td>Add new submodule at submodule_path</td>
+</tr>
+<tr>
+<td><code>git submodule update --init</code></td>
+<td>Download all the submodules after cloning the main repo and also reset the submodule commit to the parent commit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="git-restore">Git Restore:</h3>
+<p>Commands to copy the directory.</p>
+<table>
+<thead>
+<tr>
+<th id="command">Command</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git restore --source &lt;branch&gt;  dirname</code></td>
+<td>Copy the directory from any branch without git history</td>
+</tr>
+</tbody>
+</table>
+<h3 id="git-repo-maintenance">Git repo maintenance</h3>
+<p>Commands keep the local repo clean and faster.</p>
+<table>
+<thead>
+<tr>
+<th id="command">Command</th>
+<th id="description">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>git prune</code></td>
+<td>Clean up orphaned objects/commits</td>
+</tr>
+</tbody>
+</table>
+<h3 id="time-savers">Time savers</h3>
+<h5 id="update-the-last-commit-which-is-already-pushed-to-remote">Update the last commit which is already pushed to remote.</h5>
+<p><code>git add . &amp;&amp; git commit --amend --no-edit &amp;&amp; git push --force</code></p>
+<h4 id="merge-multiple-local-commits-into-a-single-commit-before-pushing-to-remote">Merge multiple local commits into a single commit before pushing to remote</h4>
+<p><code>git rebase -i HEAD~10</code>  <br />
+replace <code>pick</code> with <code>fixup</code> for the commits you want to merge.  </p>
+<h5 id="note-the-oldest-commit-is-at-the-top">Note: The oldest commit is at the top.</h5>
+<h3 id="tips">Tips:</h3>
+<h4 id="disable-terminal-screen-oh-my-zsh">Disable terminal screen (oh-my-zsh)</h4>
+<p>Add the below line to <code>~/.zshrc</code> for permanent change.</p>
+<pre><code class="hljs bash language-bash"><span class="hljs-built_in">unset</span> LESS</code></pre>
+<h3 id="reference">Reference:</h3>
+<ul>
+<li><a href="https://git-scm.com/docs">https://git-scm.com/docs</a></li>
+<li><a href="http://schacon.github.io/git/git.html">http://schacon.github.io/git/git.html</a>  </li>
+<li><a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Cheatsheet#git">zsh git aliases</a></li>
+<li><a href="https://stackoverflow.com/a/54935492/7247089">What is HEAD ?</a></li>
+<li><a href="https://github.com/pluralsight/git-internals-pdf">git-internals-pdf</a></li>
+</ul>
+            </main>
+          </body>
+        </html>
