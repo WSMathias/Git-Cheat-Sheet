@@ -34,7 +34,7 @@ jobs:
         with:
           node-version: "20"
       - name: Install dependencies
-        run: npx github-readme-to-html
+        run: npm install github-readme-to-html && npx github-readme-to-html
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
