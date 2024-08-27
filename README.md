@@ -165,6 +165,7 @@ Note: ref1 and ref2 could be `branchNames`, `remoteName/branchName`, commit `SHA
 | ` git diff ref1:path/to/file1 ref2:path/to/file2 ` | Show difference between two references |
 | ` git diff -- path/to/file ... origin `            | Show file difference between the local file and remote file of the current branch |
 | ` git diff branch_name:path/to/file `              | Simplified version of the above command |
+| ` git diff -- /dev/null path/to/file `              | Show contents of the untracked file in diff style |
 
 ### Git patch
 without author info:
