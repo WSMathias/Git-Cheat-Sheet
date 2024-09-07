@@ -19,6 +19,7 @@
 | ` git config --global core.editor "vim"`                 | Change editor to vim |
 | ` git config --global core.ignorecase false`             | Detect changes in filename case change |
 | ` git config --global init.templatedir '~/.git_template` | Set git template dir ([to configure hooks][git-template-stackoverflow])|
+| ` git config --global push.autoSetupRemote true`         | Skip `git branch --set-upstream` while pusing new branch to remote |
 
 #### Git alias to create custom command shortcuts
 | Command | Description |
