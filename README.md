@@ -95,6 +95,7 @@
 | Command | Description |
 |---------|-------------|
 | ` git commit --amend`                   | Edit last commit message. |
+| ` git commit --author="First Last <first.last@company.xxx>" --amend --no-edit` | Edit the author info of the last commit. |
 | ` git revert <commit_id>`               | Rollback to the commit specified by commit_id |
 | ` git rebase -i HEAD~n`                 | Opens list of the last n commits,<br>replace _"pick"_ by _"reword"_ to alter the commit message of those commits. |
 | ` git reset --soft HEAD~n`	          | Uncommit the last n commits without overwriting the working directory files. |
