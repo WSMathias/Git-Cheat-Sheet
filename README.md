@@ -3,10 +3,7 @@
 | git | version >= 2.37.1 |
 |-----|-------------------|
 
-### Basic git setup :
-
-
-### Git config:
+### Git config
 #### Set Global config (Omit `--global` to lit config to current repo)
 ##### These will be reflected as Author details in each commit you make
 | Command | Description |
@@ -27,7 +24,7 @@
 | ` git config --global alias.<short-alias> 'full command'`  | Create a new git alias in the form of a new git command |
 | ` git config --global alias.ucc 'commit --amend --no-edit'`| Run `git ucc` instead of `git commit --amend --no-edit` |
 
-#### Unset config:
+#### Unset config
 | Command | Description |
 |---------|-------------|
 | ` git config --global --unset <config-key>` | Unset global config  <br>ex: git config --global --unset user.name |
@@ -40,14 +37,14 @@
 
 [More operations on config][git-config-stackoverflow]
 
-### Adding git to the project:
+### Adding git to the project
 | Command | Description |
 |---------|-------------|
 | ` git init .`                     | Initialize git inside the project root directory. |
 | ` git add .`                      | Stage all files for commit when run from the root directory |
 | ` git commit -m "commit-message"` | Commit staged files to git. |
 
-### Adding Remote repo to Project:
+### Adding Remote repo to Project
 | Command | Description |
 |---------|-------------|
 | ` git remote add <remote_name> <remote_address>` | Add remote repository where<br>remote_name: origin,upstream etc<br> remote_address:(URL) Github, Bitbucket etc |
@@ -57,14 +54,14 @@
 | ` git remote rename origin upstream`             | Rename remote |
 | ` git push <remote_name> <branch-name>`          | Push all the commits to remote default branch name master |
 
-### Synchronizing local with remote (upstream):
+### Synchronizing local with remote (upstream)
 | Command | Description |
 |---------|-------------|
 | ` git fetch` | Download changes from remote (default `origin`) without making any changes to files in the working directory. |
 | ` git pull`  | Download remote commits from the origin repository configured as upstream for the current branch. |
 | ` git push`  |  Upload local commits to remote. |
 
-### Branches in git:
+### Branches in git
 | Command | Description |
 |---------|-------------|
 | ` git branch -a`                                     | Show all branches. |
@@ -78,35 +75,35 @@
 | ` git push <remote_name> :<branch_name>`             |Delete remote branch. |
 | ` git branch --contains  <commit_id>`                | Search branches containing the given commit id |
 
-### Git stash:
-##### Save current changes without committing before doing pull and checkout to another branch
+### Git stash
+##### Save current changes without committing before doing a `pull` and `checkout` to another branch
 | Command | Description |
 |---------|-------------|
 | ` git stash save "message"`             | Save changes with give message after running `git add <path>` |
 | ` git stash list`                       | Show stash list |
-| ` git stash pop`                        | Apply the last stash to the current branch and delete stash |
+| ` git stash pop`                        | Apply the last stash to the current branch and delete the stash |
 | ` git stash apply stash@{n}`            | Apply `n`th stash without deleting from stash |
 | ` git checkout stash@{n} -- <filename>` | check out a file from `n`th stash |
 | ` git stash clear`                      | Clear all stash |
 | ` git stash show -p`                    | view last stash content |
 | ` git stash show -p stash@{n}`          | view `n`th stash content |
 
-### Commits in git:
+### Commits in git
 | Command | Description |
 |---------|-------------|
 | ` git commit --amend`                   | Edit last commit message. |
 | ` git commit --author="First Last <first.last@company.xxx>" --amend --no-edit` | Edit the author info of the last commit. |
 | ` git revert <commit_id>`               | Rollback to the commit specified by commit_id |
 | ` git rebase -i HEAD~n`                 | Opens list of the last n commits,<br>replace _"pick"_ by _"reword"_ to alter the commit message of those commits. |
-| ` git reset --soft HEAD~n`	          | Uncommit the last n commits without overwriting the working directory files. |
-| ` git reset --hard HEAD~n`	          | Uncommit last n changes and overwrite the working directory files |
+| ` git reset --soft HEAD~n`	            | Uncommit the last n commits without overwriting the working directory files. |
+| ` git reset --hard HEAD~n`	            | Uncommit last n changes and overwrite the working directory files |
 | ` git cherry-pick <commit_id>`          | Pull commit from any branch by its commit id into the current branch |
 | ` git rev-parse --short HEAD`           | Print last commit id |
 | ` git commit --all --amend --no-edit`   | Add current changes to last commit |
 | ` git merge-base <branch A> <branch B>` | Get the latest common commit ID between branch `A` and branch `B`|
 - [Altering old commit content](https://stackoverflow.com/a/2719636)
 
-### Merging in git :
+### Merging in git
 | Command | Description |
 |---------|-------------|
 | ` git merge <branch_name>`                   | Merge any branch into current branch |
@@ -115,13 +112,13 @@
 | ` git checkout <branch_name> -- <file_name>` | Checkout single file from any branch |
 | ` git checkout <branch_name> -- .`           | Checkout all the files from any branch |
 
-### Fix diverged branches:
+### Fix diverged branches
 |Option| Command |
 |:--:|:-------:|
 | 1  | `git rebase`                             | Rebase on default upstream |
 | 2  | `git rebase <remote_name>/<branch_name>` | Rebase on non-upstream remote branch |
 
-### Caching in git :
+### Caching in git
 ##### Run these commands after updating the .gitignore file and then commit the changes.
 | Command | Description |
 |---------|-------------|
@@ -129,12 +126,12 @@
 | `git rm -r --cached .`       | Remove all files from git cache |
 
 ### Tags in git
-#### Taggign is widely used to create releases and mark milestones
+#### Tagging is widely used to create releases and mark milestones
 | Command | Description |
 |---------|-------------|
 | `git tag -l`                        | List all the tags |
 | `git tag -a <tagname> -m <message>` | Create an annotated tag, with detailed info about the tagger |
-| `git tag <tagname>`                 | Create a lightweight tag, tag with only a reference to commit |
+| `git tag <tagname>`                 | Create a lightweight tag, tag with only a reference to a commit |
 | `git tag -l "v1.0.*"`               | List all the tags matching given pattern |
 | `git show <tagname>`                | View tag details |
 | `git push origin <tagname>`         | Transfer tag to remote |
@@ -142,7 +139,7 @@
 | `git tag -d <tagname>`              | Delete local tag |
 | `git push origin --delete <tagname>`| Delete remote tag |
 
-### Upstream in git :
+### Upstream in git
 ##### Upstream is used when we have multiple repositories for a single project
 | Command | Description |
 |---------|-------------|
@@ -150,7 +147,7 @@
 | ` git branch --set-upstream-to=<remote_name>/<remote_branch_name>`                     | Set new upstream for the current branch. |
 | ` git push -u <remote_name> <branch_name>`                                             | Push to remote branch and set as upstream |
 
-### List commits in git (log):
+### List commits in git (log)
 | Command | Description |
 |---------|-------------|
 | ` git log`                                  | List all commits (comprehensive) |
@@ -167,22 +164,22 @@ Note: ref1 and ref2 could be `branchNames`, `remoteName/branchName`, commit `SHA
 | ` git diff ref1:path/to/file1 ref2:path/to/file2 ` | Show difference between two references |
 | ` git diff -- path/to/file ... origin `            | Show file difference between the local file and remote file of the current branch |
 | ` git diff branch_name:path/to/file `              | Simplified version of the above command |
-| ` git diff -- /dev/null path/to/file `              | Show contents of the untracked file in diff style |
+| ` git diff -- /dev/null path/to/file `             | Show contents of the untracked file in diff style |
 
 ### Git patch
-without author info:
+without author info
 | Command | Description |
 |---------|-------------|
 | ` git diff > my_changes.patch ` | Create patch file |
 | ` git apply  my_changes.patch`  | Applying patch file |
 
-### List file activity since the last commit:
+### List file activity since the last commit
 | Command | Description |
 |---------|-------------|
 | ` git status`                        | List all created/modified/deleted/staged files |
 | ` git status . -- ':!dir1' ':!dir2'` | skip status result for the given directories |
 
-### Managing files:
+### Managing files
 | Command | Description |
 |---------|-------------|
 | ` git ls-files --others --exclude-standard`              | List all untracked files. |
@@ -191,7 +188,7 @@ without author info:
 | ` git update-index --no-assume-unchanged <ignored file>` | Revert above action. |
 | `git show <branch>:<file>`                               | Peek into file from different branch. |
 
-### Git worktree:
+### Git worktree
 It is useful when working on multiple branches simultaneously without maintaining multiple clones for each branch.
 | Command | Description |
 |---------|-------------|
@@ -200,14 +197,14 @@ It is useful when working on multiple branches simultaneously without maintainin
 | ` git worktree remove ../myProject-master`     | Delete worktree (folder will still be there) |
 | ` git worktree repair ../new/worktree/path`    | Repair worktree after moving worktree or bare repository locally to a different location|
 
-### Git Submodule:
+### Git Submodule
 Commands to manage submodules.
 | Command | Description |
 |---------|-------------|
 | ` git submodule add <repo_address> <submodule_path>` | Add new submodule at submodule_path |
 | ` git submodule update --init`                       | Download all the submodules after cloning the main repo and also reset the submodule commit to the parent commit |
 
-### Git Restore:
+### Git Restore
 Commands to copy the directory.
 | Command | Description |
 |---------|-------------|
@@ -221,15 +218,24 @@ Commands keep the local repo clean and faster.
 
 
 ### Time savers
-##### Update the last commit which is already pushed to remote.  
-` git add . && git commit --amend --no-edit && git push --force`
-
-#### Merge multiple local commits into a single commit before pushing to remote
-` git rebase -i HEAD~10`  
-replace `pick` with `fixup` for the commits you want to merge.  
+---
+##### Update the last commit, which is already pushed to the remote.  
+```bash
+git add . && git commit --amend --no-edit && git push --force
+```
+---
+#### Merge multiple local commits into a single commit before pushing to the remote
+```bash
+git rebase -i HEAD~10
+```
+Replace `pick` with `fixup` or `f` for the commits you want to merge.  
 ##### Note: The oldest commit is at the top.
-
-### Tips:
+---
+#### Open the current repository's root in VS Code from any directory within the repository.
+```bash
+code $(git rev-parse --show-toplevel)
+```
+---
 #### Disable terminal screen (oh-my-zsh)
 Add the below line to `~/.zshrc` for permanent change.
 ```bash
